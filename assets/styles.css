@@ -10,8 +10,8 @@ img{max-width:100%;display:block}
 
 .hos-nav{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:9999;width:calc(100% - 48px);max-width:1200px;background:rgba(28,28,26,.85);backdrop-filter:blur(20px);border:1px solid rgba(196,163,90,.15);border-radius:60px;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;transition:all .4s var(--ease)}
 .hos-nav.scrolled{top:12px;background:rgba(28,28,26,.96);box-shadow:0 8px 40px rgba(0,0,0,.3)}
-.hos-nav-logo{font-family:var(--font-serif);font-size:17px;color:var(--cream);white-space:nowrap;display:flex;align-items:center;justify-content:flex-start;height:64px;line-height:1;overflow:hidden;flex:0 0 auto}
-.hos-nav-logo img{display:block !important;height:64px !important;width:64px !important;max-height:64px !important;max-width:64px !important;min-width:64px;object-fit:contain;object-position:left center}
+.hos-nav-logo{font-family:var(--font-serif);font-size:17px;color:var(--cream);white-space:nowrap;display:flex;align-items:center;justify-content:flex-start;height:128px;line-height:1;overflow:hidden;flex:0 0 auto}
+.hos-nav-logo img{display:block !important;height:128px !important;width:128px !important;max-height:128px !important;max-width:128px !important;min-width:128px;object-fit:contain;object-position:left center}
 .hos-nav-links{display:flex;align-items:center;gap:4px}
 .hos-nav-links a{font-size:12px;font-weight:500;color:rgba(247,244,238,.55);letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:30px;transition:all .3s}
 .hos-nav-links a:hover,.hos-nav-links a.active{color:var(--cream);background:rgba(247,244,238,.08)}
