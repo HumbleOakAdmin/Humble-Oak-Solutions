@@ -1,0 +1,135 @@
+:root{
+  --cream:#F7F4EE;--cream-dark:#EDE9E0;--charcoal:#1C1C1A;--charcoal-mid:#2E2E2B;--gold:#C4A35A;--sage:#4A5C4E;
+  --font-serif:"DM Serif Display",serif;--font-sans:"Inter",sans-serif;--ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--cream);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none}
+img{max-width:100%;display:block}
+
+.hos-nav{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:9999;width:calc(100% - 48px);max-width:1200px;background:rgba(28,28,26,.85);backdrop-filter:blur(20px);border:1px solid rgba(196,163,90,.15);border-radius:60px;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;transition:all .4s var(--ease)}
+.hos-nav.scrolled{top:12px;background:rgba(28,28,26,.96);box-shadow:0 8px 40px rgba(0,0,0,.3)}
+.hos-nav-logo{font-family:var(--font-serif);font-size:17px;color:var(--cream);white-space:nowrap}
+.hos-nav-links{display:flex;align-items:center;gap:4px}
+.hos-nav-links a{font-size:12px;font-weight:500;color:rgba(247,244,238,.55);letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:30px;transition:all .3s}
+.hos-nav-links a:hover,.hos-nav-links a.active{color:var(--cream);background:rgba(247,244,238,.08)}
+.hos-nav-cta{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--charcoal);background:var(--gold);padding:10px 22px;border-radius:30px;white-space:nowrap}
+
+.hos-btn{display:inline-block;padding:14px 32px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s var(--ease)}
+.hos-btn-light{background:var(--cream);color:var(--charcoal)}
+.hos-btn-outline{border:1px solid rgba(247,244,238,.4);color:var(--cream);background:transparent}
+.hos-btn-dark{background:var(--charcoal);color:var(--cream)}
+.hos-btn-gold{background:var(--gold);color:var(--charcoal)}
+
+.hos-anim{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.hos-anim.visible{opacity:1;transform:translateY(0)}
+
+.hos-hero,.hos-page-hero{position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hos-hero{min-height:100vh;padding:120px 64px 80px}
+.hos-page-hero{min-height:56vh;padding:120px 64px 80px;background-size:cover;background-position:center}
+.hos-hero-bg,.hos-hero-overlay,.hos-page-hero-overlay{position:absolute;inset:0}
+.hos-hero-bg{background-size:cover;background-position:center}
+.hos-hero-overlay{background:linear-gradient(to top,rgba(28,28,26,.75),rgba(28,28,26,.15))}
+.hos-page-hero-overlay{background:linear-gradient(to top,rgba(28,28,26,.85),rgba(28,28,26,.4))}
+.hos-hero-content,.hos-page-hero-content{position:relative;z-index:2}
+.hos-hero-content{max-width:900px}
+.hos-page-hero-content{max-width:800px}
+.hos-hero-tag,.hos-page-hero-tag{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.hos-hero-title{font-family:var(--font-serif);font-size:clamp(58px,10vw,140px);line-height:.92;color:var(--cream);margin-bottom:24px;font-weight:400}
+.hos-page-hero-title{font-family:var(--font-serif);font-size:clamp(42px,7vw,80px);line-height:1.05;color:var(--cream);margin-bottom:20px;font-weight:400}
+.hos-hero-sub,.hos-page-hero-sub{font-size:17px;color:rgba(247,244,238,.75);line-height:1.7;max-width:560px}
+.hos-hero-btns{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap}
+
+.hos-section{padding:100px 64px}
+.hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1200px;margin:0 auto}
+.hos-intro-text h2,.hos-story-text p,.hos-about-mission-text p,.hos-about-exp-text p,.hos-team-content p,.hos-services-intro-inner p{font-size:16px;line-height:1.8;color:rgba(28,28,26,.7);font-weight:300}
+.hos-story-text h3,.hos-about-values-inner h2,.hos-services-intro-inner h2,.hos-team-content h2,.hos-contact-form-wrap h2{font-family:var(--font-serif);font-weight:400}
+.hos-story-text h3{font-size:36px;margin-bottom:20px}
+.hos-intro-img img,.hos-story-img img,.hos-about-exp-img img{height:400px;object-fit:cover;width:100%}
+.hos-about-mission,.hos-about-values,.hos-services-intro,.hos-team-intro,.hos-contact-content{padding:100px 64px}
+.hos-about-exp{padding:80px 64px;background:var(--cream-dark)}
+.hos-about-mission-img img{height:500px;object-fit:cover;width:100%}
+.hos-lead{font-size:18px;color:var(--sage);line-height:1.7;margin-bottom:16px}
+
+.hos-stat-band{background:var(--charcoal);padding:80px 64px;text-align:center;color:var(--cream)}
+.hos-stat-band-inner{max-width:1200px;margin:0 auto}
+.hos-stat-band h2{font-family:var(--font-serif);font-size:clamp(32px,4vw,48px);margin-bottom:12px;font-weight:400}
+.hos-stat-band p{font-size:16px;color:rgba(247,244,238,.6);margin-bottom:48px}
+.hos-stat-band-grid,.hos-sp-grid,.hos-values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.hos-sp-grid{grid-template-columns:repeat(4,1fr)}
+.hos-stat-item{padding:24px}
+.hos-stat-num,.hos-stat-prefix,.hos-stat-suffix{font-family:var(--font-serif);font-size:clamp(40px,5vw,64px);color:var(--gold);line-height:1}
+.hos-stat-label{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,244,238,.5);margin-top:10px}
+
+.hos-services-preview{text-align:center}
+.hos-sp-inner{max-width:1000px;margin:0 auto}
+.hos-sp-inner h2{font-family:var(--font-serif);font-size:clamp(32px,4vw,48px);margin-bottom:16px}
+.hos-sp-sub{font-size:16px;color:rgba(28,28,26,.6);max-width:650px;margin:0 auto 48px;line-height:1.7}
+.hos-sp-card{background:var(--cream-dark);padding:40px 24px;text-align:center}
+.hos-sp-icon{font-size:32px;margin-bottom:14px}
+.hos-sp-card h4{font-family:var(--font-serif);font-size:16px;font-weight:400}
+
+.hos-services-list{padding:0 64px 80px}
+.hos-services-list-inner{max-width:1000px;margin:0 auto}
+.hos-service-item{display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:start;padding:28px 0;border-bottom:1px solid rgba(28,28,26,.08)}
+.hos-service-item:first-child{border-top:1px solid rgba(28,28,26,.08)}
+.hos-service-num{font-family:var(--font-serif);font-size:24px;color:var(--gold)}
+.hos-service-body h3{font-family:var(--font-serif);font-size:22px;margin-bottom:8px;font-weight:400}
+.hos-service-body p{font-size:15px;line-height:1.7;color:rgba(28,28,26,.62)}
+.hos-service-toggle{font-size:24px;color:var(--gold);cursor:pointer}
+.hos-service-detail{display:none;padding:0 0 28px 84px}
+.hos-service-detail.open{display:block}
+.hos-service-detail p{font-size:14px;line-height:1.75;color:rgba(28,28,26,.65)}
+
+.hos-team-intro-inner{max-width:840px;margin:0 auto;text-align:center}
+.hos-team-member{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+.hos-team-member:nth-child(even){direction:rtl}
+.hos-team-member:nth-child(even)>*{direction:ltr}
+.hos-team-photo{background-size:cover;background-position:center;min-height:380px}
+.hos-team-content{padding:64px 48px;display:flex;flex-direction:column;justify-content:center}
+.hos-team-role{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hos-quote{font-family:var(--font-serif);font-size:18px;font-style:italic;color:var(--sage);border-left:3px solid var(--gold);padding:16px 0 16px 24px;margin-top:24px}
+
+.hos-contact-form-wrap,.hos-contact-info{padding-top:24px}
+.hos-form{display:flex;flex-direction:column;gap:18px}
+.hos-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.hos-form-group{display:flex;flex-direction:column;gap:6px}
+.hos-form-group label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(28,28,26,.5)}
+.hos-form-group input,.hos-form-group textarea{width:100%;padding:14px 16px;border:1px solid rgba(28,28,26,.15);background:transparent;font-size:15px}
+.hos-contact-card{margin-bottom:24px}
+.hos-contact-card h3{font-family:var(--font-serif);font-size:16px;font-weight:400;margin-bottom:8px}
+.hos-contact-card a,.hos-contact-card p{color:rgba(28,28,26,.7);font-size:15px;line-height:1.6}
+
+.hos-cta,.hos-cta-band{padding:90px 64px;text-align:center}
+.hos-cta{background:var(--charcoal)}
+.hos-cta h2{font-family:var(--font-serif);font-size:clamp(36px,5vw,56px);color:var(--cream);margin-bottom:28px;font-weight:400}
+.hos-cta-band{background:var(--sage)}
+.hos-cta-band-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
+.hos-cta-band-text{text-align:left}
+.hos-cta-band-text h2{font-family:var(--font-serif);font-size:clamp(24px,3vw,36px);color:var(--cream);font-weight:400}
+.hos-cta-band-text p{font-size:15px;color:rgba(247,244,238,.75);margin-top:8px}
+
+.hos-footer{background:var(--charcoal);padding:64px 64px 32px;color:var(--cream)}
+.hos-footer-inner{max-width:1200px;margin:0 auto}
+.hos-footer-nav-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;margin-bottom:34px}
+.hos-footer-logo{font-family:var(--font-serif);font-size:18px;color:var(--cream);display:inline-block;margin-bottom:8px}
+.hos-footer p,.hos-footer a{font-size:14px;color:rgba(247,244,238,.5);line-height:1.6}
+.hos-footer-links{display:flex;flex-direction:column;gap:10px}
+.hos-footer-bar{border-top:1px solid rgba(247,244,238,.1);padding-top:20px;display:flex;justify-content:center}
+.hos-footer-bar span{font-size:12px;color:rgba(247,244,238,.35)}
+
+@media(max-width:900px){
+  .hos-nav-links{display:none}
+  .hos-hero,.hos-page-hero{padding:100px 32px 60px}
+  .hos-section,.hos-about-mission,.hos-about-exp,.hos-about-values,.hos-services-intro,.hos-services-list,.hos-team-intro,.hos-contact-content,.hos-cta,.hos-cta-band{padding-left:32px;padding-right:32px}
+  .hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner,.hos-team-member{grid-template-columns:1fr;gap:36px}
+  .hos-stat-band-grid,.hos-sp-grid,.hos-values-grid,.hos-form-row{grid-template-columns:1fr}
+  .hos-team-member:nth-child(even){direction:ltr}
+  .hos-team-content{padding:40px 24px}
+  .hos-service-item{grid-template-columns:40px 1fr auto}
+  .hos-service-detail{padding-left:56px}
+  .hos-cta-band-inner{flex-direction:column;text-align:center}
+  .hos-cta-band-text{text-align:center}
+  .hos-footer-nav-cols{grid-template-columns:1fr}
+}
