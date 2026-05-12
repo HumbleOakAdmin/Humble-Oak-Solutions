@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Humble Oak Solutions | Our Services</title>
+  <title>Our Services | Humble Oak Solutions</title>
+  <meta name="description" content="Expert operations consulting, project management, web development, IT systems, business intelligence, automation, and government funding support.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
 </head>
 <body data-page="services">
   <nav class="hos-nav" id="hosNav">
-    <a href="./index.html" class="hos-nav-logo"><img src="./assets/Site Images/Logo.png" alt="Humble Oak Solutions"></a>
+    <a href="./index.html" class="hos-nav-logo"><img src="./assets/Site Images/logo-webflow-small.png" alt="Humble Oak Solutions"></a>
     <div class="hos-nav-links">
       <a href="./index.html" class="hos-nav-link" data-page="home">Home</a>
       <a href="./about-us.html" class="hos-nav-link" data-page="about">About</a>
@@ -21,44 +22,121 @@
     <a href="./contact-us.html" class="hos-nav-cta">Get in Touch</a>
   </nav>
   <main>
-    <section class="hos-page-hero" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80')">
+    <section class="hos-page-hero" style="background-image:url('./assets/Site Images/services-hero.jpg')">
       <div class="hos-page-hero-overlay"></div>
       <div class="hos-page-hero-content">
         <p class="hos-page-hero-tag hos-anim">Our Services</p>
         <h1 class="hos-page-hero-title hos-anim">Smart Solutions.<br>Real Results.</h1>
-        <p class="hos-page-hero-sub hos-anim">Practical, scalable services designed to help your business run smoother and grow faster.</p>
+        <p class="hos-page-hero-sub hos-anim"><strong>We offer practical, scalable services</strong> designed to help your business run smoother, grow faster, and operate with confidence.</p>
       </div>
     </section>
 
     <section class="hos-services-intro">
       <div class="hos-services-intro-inner">
         <h2 class="hos-anim">What We Do</h2>
-        <p class="hos-anim">Click each service to expand details.</p>
+        <p class="hos-anim">Tap a row to read more, or <a href="./contact-us.html" style="color:var(--gold);text-decoration:underline">get in touch</a> to talk through your priorities.</p>
       </div>
     </section>
 
     <section class="hos-services-list">
       <div class="hos-services-list-inner">
-        <div class="hos-service-item hos-anim" data-detail-id="svc-1"><div class="hos-service-num">01</div><div class="hos-service-body"><h3>Operations Consulting</h3><p>Streamline workflows, reduce waste, and improve performance.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-1"><p>Includes process mapping, COGS analysis, SOP development, KPI frameworks, and change management support tailored for SMB teams.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-1">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-ops-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">01</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-consultation.png" width="40" height="40" alt="">
+              <h3>Operations Consulting</h3>
+            </div>
+            <p>Streamline your workflows, reduce waste, and improve performance with tailored process optimization strategies.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-1"><p>Process mapping, COGS analysis, SOP development, KPI frameworks, lean improvement, and change management sized for growing Canadian teams.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-2"><div class="hos-service-num">02</div><div class="hos-service-body"><h3>Project &amp; Site Management</h3><p>Plan and deliver projects with precision and accountability.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-2"><p>Capital projects, relocations, site coordination, budget tracking, and owner representation to keep execution on schedule and on budget.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-2">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-pm-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">02</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-hook.png" width="40" height="40" alt="">
+              <h3>Project &amp; Site Management</h3>
+            </div>
+            <p>From relocations to infrastructure upgrades, we plan and manage capital projects with precision and accountability.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-2"><p>End-to-end delivery support for tenant improvements, equipment moves, field coordination, scheduling, budgeting, and stakeholder communication.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-3"><div class="hos-service-num">03</div><div class="hos-service-body"><h3>Web Development &amp; Maintenance</h3><p>Build and maintain a clean, secure web presence.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-3"><p>Custom responsive website builds, migrations, SEO foundations, performance improvements, and ongoing maintenance plans.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-3">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-web-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">03</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-internet.png" width="40" height="40" alt="">
+              <h3>Web Development &amp; Maintenance</h3>
+            </div>
+            <p>Build a clean, responsive, and high-performing web presence with ongoing support to keep your site secure, updated, and optimized.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-3"><p>Design systems, performance tuning, accessibility foundations, hosting guidance, and dependable content updates after launch.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-4"><div class="hos-service-num">04</div><div class="hos-service-body"><h3>IT Systems Administration</h3><p>Keep your infrastructure reliable and secure.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-4"><p>Server and network administration, backup/disaster recovery, Microsoft 365 support, cybersecurity hardening, and end-user support.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-4">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-it-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">04</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-it-department.png" width="40" height="40" alt="">
+              <h3>IT Systems Administration</h3>
+            </div>
+            <p>Keep your infrastructure running smoothly with expert server management, user support, backup systems, and cybersecurity best practices.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-4"><p>Microsoft 365 administration, identity and access, network hardening, monitoring, documentation, and practical help-desk coverage for SMBs.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-5"><div class="hos-service-num">05</div><div class="hos-service-body"><h3>Business Intelligence</h3><p>Turn data into clear, actionable decisions.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-5"><p>Power BI dashboards, KPI definition, data integration, automated reporting, and training so leadership teams can act faster with confidence.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-5">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-bi-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">05</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-business-intelligence.png" width="40" height="40" alt="">
+              <h3>Business Intelligence</h3>
+            </div>
+            <p>Unlock the power of your data with custom KPI dashboards, reporting tools, and performance tracking solutions.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-5"><p>Power BI modelling, automated refreshes, executive-ready visuals, and training so your team can trust the numbers and act quickly.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-6"><div class="hos-service-num">06</div><div class="hos-service-body"><h3>Automation &amp; Integration</h3><p>Save time by automating repetitive tasks.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-6"><p>Workflow automation, system integrations, inventory automation, and custom API scripting to reduce manual effort and errors.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-6">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-automation-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">06</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-automation.png" width="40" height="40" alt="">
+              <h3>Automation &amp; Integration</h3>
+            </div>
+            <p>Boost efficiency through smart systems&mdash;digital inventory, production automation, and process control technologies.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-6"><p>Workflow automation, API integrations, and practical tooling so information moves once&mdash;not through spreadsheets and manual handoffs.</p></div>
 
-        <div class="hos-service-item hos-anim" data-detail-id="svc-7"><div class="hos-service-num">07</div><div class="hos-service-body"><h3>Government Funding Applications</h3><p>Secure growth capital through grants and incentives.</p></div><a class="hos-service-toggle" href="#">+</a></div>
-        <div class="hos-service-detail" id="svc-7"><p>Funding scans, application writing, financial support documents, and compliance reporting help from first draft to final submission.</p></div>
+        <div class="hos-service-item hos-anim" data-detail-id="svc-7">
+          <div class="hos-service-thumb" style="background-image:url('./assets/Site Images/svc-gov-photo.jpg')" role="img" aria-label=""></div>
+          <div class="hos-service-num">07</div>
+          <div class="hos-service-body">
+            <div class="hos-service-title-row">
+              <img class="hos-service-icon-img" src="./assets/Site Images/icon-application.png" width="40" height="40" alt="">
+              <h3>Government Funding Applications</h3>
+            </div>
+            <p>Secure growth capital with expert support on grant strategy, funding applications, and government incentive programs.</p>
+          </div>
+          <a class="hos-service-toggle" href="#" aria-expanded="false">+</a>
+        </div>
+        <div class="hos-service-detail" id="svc-7"><p>Program identification, narrative development, budgets, submissions, and post-award reporting support aligned to Canadian funding programs.</p></div>
       </div>
     </section>
 
