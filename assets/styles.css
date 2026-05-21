@@ -143,14 +143,20 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-team-intro-inner{max-width:840px;margin:0 auto;text-align:center;padding-bottom:clamp(32px,5vw,48px)}
 
 .hos-contact-form-wrap,.hos-contact-info{padding-top:24px}
-.hos-contact-content .hos-contact-inner{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:start}
+.hos-contact-content .hos-contact-inner{grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:clamp(28px,4vw,48px);align-items:start}
+.hos-contact-form-wrap{min-width:0}
 .hos-contact-form-wrap h2{margin-bottom:12px}
-.hos-contact-form-intro{font-size:15px;line-height:1.7;color:rgba(28,28,26,.65);margin-bottom:20px;max-width:52ch}
-.hos-form-embed{background:var(--cream-dark);padding:clamp(16px,3vw,24px);border-radius:var(--radius);box-shadow:var(--shadow-md);border:1px solid rgba(28,28,26,.08);overflow:hidden}
-.hos-form-embed iframe{display:block;width:100%;min-height:520px;height:min(72vh,720px);max-height:900px;border:none;border-radius:var(--radius);background:#fff}
+.hos-contact-form-intro{font-size:15px;line-height:1.7;color:rgba(28,28,26,.65);margin-bottom:20px}
+.hos-form-embed{width:100%;background:var(--cream-dark);padding:clamp(12px,2vw,20px);border-radius:var(--radius);box-shadow:var(--shadow-md);border:1px solid rgba(28,28,26,.08);overflow:hidden}
+.hos-form-embed iframe{display:block;width:100%;min-width:100%;min-height:640px;height:min(80vh,860px);max-height:960px;border:none;border-radius:var(--radius);background:#fff}
 .hos-form-embed-note{margin-top:14px;font-size:13px;color:rgba(28,28,26,.55);line-height:1.5}
 .hos-form-embed-note a{color:var(--sage);font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
 .hos-form-embed-note a:hover{color:var(--logo-green)}
+.hos-contact-info{min-width:0}
+.hos-contact-info .hos-contact-card{margin-bottom:16px;padding:16px 18px}
+.hos-contact-info .hos-contact-card:last-child{margin-bottom:0}
+.hos-contact-info .hos-contact-card h3{font-size:14px;margin-bottom:6px}
+.hos-contact-info .hos-contact-card a,.hos-contact-info .hos-contact-card p{font-size:13px;line-height:1.55;word-break:break-word}
 .hos-form{display:flex;flex-direction:column;gap:18px;background:var(--cream-dark);padding:32px;border-radius:var(--radius);box-shadow:var(--shadow-md)}
 .hos-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .hos-form-group{display:flex;flex-direction:column;gap:6px}
@@ -186,7 +192,7 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 @media(max-width:900px){
   .hos-hero,.hos-page-hero{margin-left:16px;margin-right:16px;padding-top:88px}
   .hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner{grid-template-columns:1fr;gap:36px}
-  .hos-form-embed iframe{min-height:480px;height:65vh}
+  .hos-form-embed iframe{min-height:560px;height:70vh}
   .hos-stat-band-grid,.hos-sp-grid,.hos-values-grid,.hos-form-row,.hos-team-grid{grid-template-columns:1fr}
   .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-home-photos-grid,.hos-sp-images{grid-template-columns:1fr}
