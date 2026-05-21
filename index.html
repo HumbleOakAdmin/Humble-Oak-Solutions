@@ -11,15 +11,21 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body data-page="home">
-  <nav class="hos-nav" id="hosNav">
-    <a href="./index.html" class="hos-nav-logo"><img src="./assets/Site Images/logo-webflow-small.png" alt="Humble Oak Solutions"></a>
-    <div class="hos-nav-links">
-      <a href="./index.html" class="hos-nav-link" data-page="home">Home</a>
-      <a href="./about-us.html" class="hos-nav-link" data-page="about">About</a>
-      <a href="./services.html" class="hos-nav-link" data-page="services">Services</a>
-      <a href="./our-team.html" class="hos-nav-link" data-page="team">Team</a>
+  <div class="hos-nav-backdrop" id="hosNavBackdrop" aria-hidden="true"></div>
+  <nav class="hos-nav" id="hosNav" aria-label="Main navigation">
+    <button type="button" class="hos-nav-toggle" id="hosNavToggle" aria-label="Open menu" aria-expanded="false" aria-controls="hosNavPanel">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="hos-nav-panel" id="hosNavPanel">
+      <a href="./index.html" class="hos-nav-logo"><img src="./assets/Site Images/logo-webflow-small.png" alt="Humble Oak Solutions"></a>
+      <div class="hos-nav-links">
+        <a href="./index.html" class="hos-nav-link" data-page="home">Home</a>
+        <a href="./about-us.html" class="hos-nav-link" data-page="about">About</a>
+        <a href="./services.html" class="hos-nav-link" data-page="services">Services</a>
+        <a href="./our-team.html" class="hos-nav-link" data-page="team">Team</a>
+      </div>
+      <a href="./contact-us.html" class="hos-nav-cta">Get in Touch</a>
     </div>
-    <a href="./contact-us.html" class="hos-nav-cta">Get in Touch</a>
   </nav>
 
   <main>
@@ -81,7 +87,9 @@
           <div class="hos-sp-card hos-anim"><h4>web development</h4></div>
           <div class="hos-sp-card hos-anim"><h4>it systems</h4></div>
         </div>
-        <a href="./services.html" class="hos-btn hos-btn-dark">View All Services</a>
+        <div class="hos-sp-cta-wrap">
+          <a href="./services.html" class="hos-btn hos-btn-dark">View All Services</a>
+        </div>
       </div>
     </section>
 
