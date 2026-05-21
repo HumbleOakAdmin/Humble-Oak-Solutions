@@ -54,6 +54,7 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 /* —— Typography scale —— */
 .hos-eyebrow,.hos-kicker,.hos-hero-tag,.hos-page-hero-tag{display:block;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 .hos-heading-section{font-family:var(--font-serif);font-size:clamp(28px,4vw,48px);font-weight:400;line-height:1.12;letter-spacing:.04em;text-transform:uppercase;color:var(--charcoal);margin-bottom:20px}
+.hos-heading-section--prominent{font-size:clamp(40px,6vw,72px);font-weight:600;line-height:1.05;margin-bottom:28px}
 .hos-heading-section--light{color:var(--cream)}
 .hos-heading-sub{font-family:var(--font-serif);font-size:clamp(22px,3vw,28px);font-weight:400;line-height:1.25;color:var(--charcoal);margin:24px 0 12px}
 .hos-heading-card{font-family:var(--font-serif);font-size:18px;font-weight:400;line-height:1.35;color:var(--charcoal);margin-bottom:12px}
