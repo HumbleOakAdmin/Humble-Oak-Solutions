@@ -143,6 +143,14 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-team-intro-inner{max-width:840px;margin:0 auto;text-align:center;padding-bottom:clamp(32px,5vw,48px)}
 
 .hos-contact-form-wrap,.hos-contact-info{padding-top:24px}
+.hos-contact-content .hos-contact-inner{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);align-items:start}
+.hos-contact-form-wrap h2{margin-bottom:12px}
+.hos-contact-form-intro{font-size:15px;line-height:1.7;color:rgba(28,28,26,.65);margin-bottom:20px;max-width:52ch}
+.hos-form-embed{background:var(--cream-dark);padding:clamp(16px,3vw,24px);border-radius:var(--radius);box-shadow:var(--shadow-md);border:1px solid rgba(28,28,26,.08);overflow:hidden}
+.hos-form-embed iframe{display:block;width:100%;min-height:520px;height:min(72vh,720px);max-height:900px;border:none;border-radius:var(--radius);background:#fff}
+.hos-form-embed-note{margin-top:14px;font-size:13px;color:rgba(28,28,26,.55);line-height:1.5}
+.hos-form-embed-note a{color:var(--sage);font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.hos-form-embed-note a:hover{color:var(--logo-green)}
 .hos-form{display:flex;flex-direction:column;gap:18px;background:var(--cream-dark);padding:32px;border-radius:var(--radius);box-shadow:var(--shadow-md)}
 .hos-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .hos-form-group{display:flex;flex-direction:column;gap:6px}
@@ -166,14 +174,19 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-footer-inner{max-width:1200px;margin:0 auto}
 .hos-footer-nav-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(32px,5vw,64px);margin-bottom:34px}
 .hos-footer-logo{font-family:var(--font-serif);font-size:18px;color:var(--cream);display:inline-block;margin-bottom:8px}
-.hos-footer p,.hos-footer a{font-size:14px;color:rgba(247,244,238,.5);line-height:1.6}
+.hos-footer p{font-size:14px;color:rgba(247,244,238,.5);line-height:1.6}
 .hos-footer-links{display:flex;flex-direction:column;gap:10px}
+.hos-footer-links a{font-size:14px;color:rgba(247,244,238,.5);line-height:1.6;font-style:normal;font-weight:400;transition:color .3s var(--ease),font-style .3s var(--ease),font-weight .3s var(--ease)}
+.hos-footer-links a:hover{color:var(--logo-green);font-style:italic}
+.hos-footer-links a.active{color:var(--logo-green);font-weight:700;font-style:normal}
+.hos-footer-links a.active:hover{color:var(--logo-green);font-weight:700;font-style:normal}
 .hos-footer-bar{border-top:1px solid rgba(247,244,238,.1);padding-top:20px;display:flex;justify-content:center;border-radius:0}
 .hos-footer-bar span{font-size:12px;color:rgba(247,244,238,.35)}
 
 @media(max-width:900px){
   .hos-hero,.hos-page-hero{margin-left:16px;margin-right:16px;padding-top:88px}
   .hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner{grid-template-columns:1fr;gap:36px}
+  .hos-form-embed iframe{min-height:480px;height:65vh}
   .hos-stat-band-grid,.hos-sp-grid,.hos-values-grid,.hos-form-row,.hos-team-grid{grid-template-columns:1fr}
   .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-home-photos-grid,.hos-sp-images{grid-template-columns:1fr}

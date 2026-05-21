@@ -41,16 +41,19 @@
       <div class="hos-contact-inner">
         <div class="hos-contact-form-wrap hos-anim">
           <h2>Send us a message</h2>
-          <form class="hos-form" id="hosContactForm">
-            <div class="hos-form-row">
-              <div class="hos-form-group"><label>First Name *</label><input type="text" name="firstName" required></div>
-              <div class="hos-form-group"><label>Last Name *</label><input type="text" name="lastName" required></div>
-            </div>
-            <div class="hos-form-group"><label>Email *</label><input type="email" name="email" required></div>
-            <div class="hos-form-group"><label>Company *</label><input type="text" name="company" required></div>
-            <div class="hos-form-group"><label>Message *</label><textarea name="message" rows="5" required></textarea></div>
-            <button type="submit" class="hos-btn hos-btn-dark">Send Message</button>
-          </form>
+          <p class="hos-contact-form-intro">Complete the form below and we&rsquo;ll get back to you. Prefer email? Use the contacts on the right.</p>
+          <div class="hos-form-embed">
+            <iframe
+              title="Humble Oak Solutions contact form"
+              src="https://forms.office.com/Pages/ResponsePage.aspx?id=NrkJ9Z9fEkSC6QRi_xoUmg-AtDKB6O1OpLtUioGgnI1UNVRIRFZLOTQ2NFpMNldaVFVENDRBTEJRTy4u&embed=true"
+              loading="lazy"
+              allowfullscreen
+              webkitallowfullscreen
+              mozallowfullscreen
+              msallowfullscreen
+            ></iframe>
+          </div>
+          <p class="hos-form-embed-note">Form not loading? <a href="https://forms.office.com/r/qSqCiSJKVR" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.</p>
         </div>
         <div class="hos-contact-info hos-anim">
           <div class="hos-contact-card"><h3>General Contact</h3><a href="mailto:info@humbleoaksolutions.com">info@humbleoaksolutions.com</a></div>
@@ -66,7 +69,13 @@
     <div class="hos-footer-inner">
       <div class="hos-footer-nav-cols">
         <div><a href="./index.html" class="hos-footer-logo">Humble Oak Solutions</a><p>Founded and operated out of British Columbia, Canada.</p></div>
-        <div class="hos-footer-links"><a href="./index.html">Home</a><a href="./about-us.html">About Us</a><a href="./services.html">Our Services</a><a href="./our-team.html">Our Team</a><a href="./contact-us.html">Contact Us</a></div>
+        <div class="hos-footer-links">
+          <a href="./index.html" data-page="home">Home</a>
+          <a href="./about-us.html" data-page="about">About Us</a>
+          <a href="./services.html" data-page="services">Our Services</a>
+          <a href="./our-team.html" data-page="team">Our Team</a>
+          <a href="./contact-us.html" data-page="contact">Contact Us</a>
+        </div>
       </div>
       <p>&copy; 2026 Humble Oak Solutions</p>
       <div class="hos-footer-bar"><span>BC, Canada</span></div>
