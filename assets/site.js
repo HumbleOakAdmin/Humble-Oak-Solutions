@@ -37,6 +37,9 @@
   document.querySelectorAll(".hos-nav-link").forEach(function (link) {
     if (link.getAttribute("data-page") === page) link.classList.add("active");
   });
+  document.querySelectorAll(".hos-footer-links a[data-page]").forEach(function (link) {
+    if (link.getAttribute("data-page") === page) link.classList.add("active");
+  });
 
   var anims = document.querySelectorAll(".hos-anim");
   if (anims.length) {
@@ -85,15 +88,7 @@
     });
   }
 
-  function toggleServiceRow(item) {
-    var detailId = item.getAttribute("data-detail-id");
-    var detail = document.getElementById(detailId);
-    var toggle = item.querySelector(".hos-service-toggle");
-    if (!detail) return;
-
-    var isOpen = detail.classList.contains("open");
-    var nextOpen = !isOpen;
-
+  function closeAllServiceRows() {
     document.querySelectorAll(".hos-service-detail.open").forEach(function (d) {
       d.classList.remove("open");
     });
@@ -103,13 +98,48 @@
       var t = i.querySelector(".hos-service-toggle");
       if (t) t.textContent = "+";
     });
+  }
 
-    if (nextOpen) {
-      detail.classList.add("open");
-      item.classList.add("is-open");
-      item.setAttribute("aria-expanded", "true");
-      if (toggle) toggle.textContent = "\u2212";
+  function openServiceRow(item, options) {
+    options = options || {};
+    var detailId = item.getAttribute("data-detail-id");
+    var detail = document.getElementById(detailId);
+    var toggle = item.querySelector(".hos-service-toggle");
+    if (!detail) return;
+
+    closeAllServiceRows();
+    detail.classList.add("open");
+    item.classList.add("is-open");
+    item.setAttribute("aria-expanded", "true");
+    if (toggle) toggle.textContent = "\u2212";
+
+    window.setTimeout(function () {
+      item.scrollIntoView({
+        behavior: options.behavior || "smooth",
+        block: "start",
+      });
+    }, options.delay || 120);
+  }
+
+  function toggleServiceRow(item) {
+    var detailId = item.getAttribute("data-detail-id");
+    var detail = document.getElementById(detailId);
+    if (!detail) return;
+
+    if (detail.classList.contains("open")) {
+      closeAllServiceRows();
+      return;
     }
+
+    openServiceRow(item, { delay: 0, behavior: "auto" });
+  }
+
+  function openServiceFromHash() {
+    var hash = window.location.hash.replace("#", "");
+    if (!hash || hash.indexOf("svc-") !== 0) return;
+    var item = document.querySelector('.hos-service-item[data-detail-id="' + hash + '"]');
+    if (!item) return;
+    openServiceRow(item, { delay: 280, behavior: "smooth" });
   }
 
   document.querySelectorAll(".hos-service-item[data-detail-id]").forEach(function (item) {
@@ -128,6 +158,11 @@
       }
     });
   });
+
+  if (document.querySelector(".hos-service-item[data-detail-id]")) {
+    window.addEventListener("load", openServiceFromHash);
+    window.addEventListener("hashchange", openServiceFromHash);
+  }
 
   var form = document.getElementById("hosContactForm");
   if (form) {
