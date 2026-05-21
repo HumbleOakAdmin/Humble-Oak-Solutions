@@ -1,30 +1,36 @@
 (function () {
-  var nav = document.getElementById("hosNav");
+  var navMenu = document.getElementById("hosNavMenu");
   var navToggle = document.getElementById("hosNavToggle");
-  var navBackdrop = document.getElementById("hosNavBackdrop");
+  var navPanel = document.getElementById("hosNavPanel");
+  var navbar = document.getElementById("hosNavbar");
 
   function setNavOpen(open) {
-    if (!nav || !navToggle) return;
-    nav.classList.toggle("is-open", open);
+    if (!navMenu || !navToggle) return;
+    navMenu.classList.toggle("is-open", open);
     navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    if (navBackdrop) navBackdrop.classList.toggle("is-visible", open);
-    document.body.style.overflow = open ? "hidden" : "";
+    if (navPanel) {
+      if (open) {
+        navPanel.style.maxHeight = navPanel.scrollHeight + "px";
+      } else {
+        var h = navPanel.scrollHeight;
+        navPanel.style.maxHeight = h + "px";
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            navPanel.style.maxHeight = "0px";
+          });
+        });
+      }
+    }
   }
 
   if (navToggle) {
     navToggle.addEventListener("click", function () {
-      setNavOpen(!nav.classList.contains("is-open"));
+      setNavOpen(!navMenu.classList.contains("is-open"));
     });
   }
 
-  if (navBackdrop) {
-    navBackdrop.addEventListener("click", function () {
-      setNavOpen(false);
-    });
-  }
-
-  document.querySelectorAll(".hos-nav-links a, .hos-nav-cta").forEach(function (link) {
+  document.querySelectorAll(".hos-nav-link").forEach(function (link) {
     link.addEventListener("click", function () {
       setNavOpen(false);
     });
@@ -34,9 +40,9 @@
     if (e.key === "Escape") setNavOpen(false);
   });
 
-  if (nav) {
+  if (navbar) {
     window.addEventListener("scroll", function () {
-      nav.classList.toggle("scrolled", window.scrollY > 60);
+      navbar.classList.toggle("scrolled", window.scrollY > 60);
     });
   }
 
