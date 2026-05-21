@@ -68,8 +68,8 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-prose p{font-size:16px;line-height:1.8;color:rgba(28,28,26,.7);font-weight:300}
 .hos-prose p+p{margin-top:18px}
 .hos-prose strong{font-weight:600;color:rgba(28,28,26,.85)}
-.hos-text-link{color:var(--gold);font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
-.hos-text-link:hover{color:var(--logo-green)}
+.hos-text-link{color:var(--logo-green);font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.hos-text-link:hover{color:var(--sage)}
 .hos-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
 .hos-quote{font-size:15px;line-height:1.75;font-style:italic;color:rgba(28,28,26,.75);padding-left:16px;border-left:3px solid var(--gold);margin-top:8px}
 .hos-quote-attribution{display:block;font-size:13px;margin-top:8px;font-style:normal;color:rgba(28,28,26,.5)}
