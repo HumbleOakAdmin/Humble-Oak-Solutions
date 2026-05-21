@@ -106,6 +106,8 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-about-mission-img img{height:500px;object-fit:cover;width:100%;border-radius:var(--radius);box-shadow:var(--shadow-md)}
 .hos-lead{font-size:18px;color:var(--sage);line-height:1.7;margin-bottom:16px;font-weight:400}
 .hos-lead strong{font-weight:600;color:var(--charcoal)}
+.hos-about-mission-text .hos-heading-section--prominent{margin-bottom:16px}
+.hos-about-mission-text .hos-lead{margin-bottom:24px;font-size:clamp(17px,2.2vw,20px);font-weight:500}
 
 .hos-stat-band{background:var(--charcoal);padding:clamp(56px,8vw,80px) clamp(24px,5vw,64px);text-align:center;color:var(--cream);margin:0 clamp(16px,3vw,32px);border-radius:var(--radius);box-shadow:var(--shadow-md)}
 .hos-stat-band-inner{max-width:1200px;margin:0 auto}
