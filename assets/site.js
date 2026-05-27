@@ -100,8 +100,7 @@
     });
   }
 
-  function openServiceRow(item, options) {
-    options = options || {};
+  function openServiceRow(item) {
     var detailId = item.getAttribute("data-detail-id");
     var detail = document.getElementById(detailId);
     var toggle = item.querySelector(".hos-service-toggle");
@@ -112,13 +111,6 @@
     item.classList.add("is-open");
     item.setAttribute("aria-expanded", "true");
     if (toggle) toggle.textContent = "\u2212";
-
-    window.setTimeout(function () {
-      item.scrollIntoView({
-        behavior: options.behavior || "smooth",
-        block: "start",
-      });
-    }, options.delay || 120);
   }
 
   function toggleServiceRow(item) {
@@ -131,7 +123,7 @@
       return;
     }
 
-    openServiceRow(item, { delay: 0, behavior: "auto" });
+    openServiceRow(item);
   }
 
   function openServiceFromHash() {
@@ -139,7 +131,7 @@
     if (!hash || hash.indexOf("svc-") !== 0) return;
     var item = document.querySelector('.hos-service-item[data-detail-id="' + hash + '"]');
     if (!item) return;
-    openServiceRow(item, { delay: 280, behavior: "smooth" });
+    openServiceRow(item);
   }
 
   document.querySelectorAll(".hos-service-item[data-detail-id]").forEach(function (item) {
