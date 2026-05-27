@@ -88,6 +88,11 @@
     });
   }
 
+  function getServiceDetail(item) {
+    var row = item.closest(".hos-service-row");
+    return row ? row.querySelector(".hos-service-detail") : null;
+  }
+
   function closeAllServiceRows() {
     document.querySelectorAll(".hos-service-detail.open").forEach(function (d) {
       d.classList.remove("open");
@@ -101,8 +106,7 @@
   }
 
   function openServiceRow(item) {
-    var detailId = item.getAttribute("data-detail-id");
-    var detail = document.getElementById(detailId);
+    var detail = getServiceDetail(item);
     var toggle = item.querySelector(".hos-service-toggle");
     if (!detail) return;
 
@@ -114,8 +118,7 @@
   }
 
   function toggleServiceRow(item) {
-    var detailId = item.getAttribute("data-detail-id");
-    var detail = document.getElementById(detailId);
+    var detail = getServiceDetail(item);
     if (!detail) return;
 
     if (detail.classList.contains("open")) {
@@ -129,7 +132,10 @@
   function openServiceFromHash() {
     var hash = window.location.hash.replace("#", "");
     if (!hash || hash.indexOf("svc-") !== 0) return;
-    var item = document.querySelector('.hos-service-item[data-detail-id="' + hash + '"]');
+    var row = document.getElementById(hash);
+    var item = row
+      ? row.querySelector(".hos-service-item")
+      : document.querySelector('.hos-service-item[data-detail-id="' + hash + '"]');
     if (!item) return;
     openServiceRow(item);
   }
