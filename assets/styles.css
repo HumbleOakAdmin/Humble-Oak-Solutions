@@ -187,12 +187,15 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-contact-form-wrap{min-width:0}
 .hos-contact-form-wrap .hos-heading-section{margin-bottom:12px}
 .hos-contact-form-intro{margin-bottom:20px}
+.hos-contact-intro-desktop{display:inline}
+.hos-contact-intro-mobile{display:none}
 .hos-form-embed{width:100%;background:var(--cream-dark);padding:clamp(12px,2vw,20px);border-radius:var(--radius);box-shadow:var(--shadow-md);border:1px solid rgba(28,28,26,.08);overflow:hidden}
-.hos-form-embed iframe{display:block;width:100%;min-width:100%;min-height:640px;height:min(80vh,860px);max-height:960px;border:none;border-radius:var(--radius);background:#fff}
+.hos-form-embed iframe{display:block;width:100%;min-width:0;min-height:640px;height:min(80vh,860px);max-height:960px;border:none;border-radius:var(--radius);background:#fff}
 .hos-form-embed-note{margin-top:14px;font-size:13px;color:rgba(28,28,26,.55);line-height:1.5}
 .hos-form-embed-note a{color:var(--sage);font-weight:500;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
 .hos-form-embed-note a:hover{color:var(--logo-green)}
 .hos-contact-info{min-width:0}
+.hos-contact-info-heading{display:none;margin-bottom:4px;font-size:clamp(22px,5vw,28px)}
 .hos-contact-info .hos-contact-card{margin-bottom:16px;padding:16px 18px}
 .hos-contact-info .hos-contact-card:last-child{margin-bottom:0}
 .hos-contact-info .hos-contact-card .hos-heading-card{font-size:14px;margin-bottom:6px}
@@ -253,8 +256,33 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
   .hos-hero,.hos-page-hero{margin-left:12px;margin-right:12px;padding-top:clamp(64px,14vw,88px);min-height:min(72svh,720px)}
   .hos-page-hero{min-height:min(44svh,440px)}
   .hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner{grid-template-columns:1fr;gap:clamp(28px,5vw,36px)}
-  .hos-contact-content .hos-contact-inner{grid-template-columns:1fr}
-  .hos-form-embed iframe{min-height:520px;height:min(75vh,820px)}
+  .hos-contact-content .hos-contact-inner{display:flex;flex-direction:column;gap:clamp(24px,5vw,36px)}
+  .hos-contact-info{order:-1;padding-top:0;display:flex;flex-direction:column;gap:12px;width:100%}
+  .hos-contact-info-heading{display:block}
+  .hos-contact-form-wrap{padding-top:0;width:100%}
+  .hos-contact-info .hos-contact-card{margin-bottom:0}
+  .hos-contact-form-wrap .hos-heading-section{font-size:clamp(24px,5vw,36px)}
+  .hos-contact-intro-desktop{display:none}
+  .hos-contact-intro-mobile{display:inline}
+  .hos-form-embed{overflow:visible;padding:clamp(8px,2vw,14px)}
+  .hos-form-embed iframe{min-height:920px;height:920px;max-height:none}
+  [data-page="contact"] .hos-page-hero{min-height:min(34svh,300px);padding-top:clamp(52px,12vw,72px);padding-bottom:clamp(24px,5vw,36px)}
+  [data-page="services"] .hos-page-hero{min-height:min(36svh,340px);padding-top:clamp(52px,12vw,72px);padding-bottom:clamp(24px,5vw,36px)}
+  [data-page="services"] .hos-page-hero-title br{display:none}
+  .hos-services-intro{padding-top:clamp(32px,6vw,48px);padding-bottom:clamp(12px,3vw,20px)}
+  .hos-services-list{padding-top:4px}
+  .hos-service-item{display:grid;grid-template-columns:1fr auto;grid-template-areas:"thumb thumb" "num toggle" "body body";gap:0;padding:0;align-items:start;overflow:hidden}
+  .hos-service-thumb{grid-area:thumb;width:100%;height:clamp(128px,36vw,188px);border-radius:var(--radius) var(--radius) 0 0;box-shadow:none}
+  .hos-service-num{grid-area:num;padding:12px 0 0 16px;font-size:20px;line-height:44px;align-self:start}
+  .hos-service-toggle{grid-area:toggle;margin:8px 8px 0 0;align-self:start}
+  .hos-service-body{grid-area:body;padding:2px 16px 16px;min-width:0;width:100%}
+  .hos-service-title-row{align-items:flex-start;gap:10px;padding-right:0}
+  .hos-service-body .hos-heading-item{font-size:clamp(17px,4.2vw,20px);line-height:1.3}
+  .hos-service-icon-img{width:32px;height:32px;flex-shrink:0}
+  .hos-service-body p{margin-top:10px;font-size:14px;line-height:1.65}
+  .hos-service-item.is-open{border-bottom-left-radius:0;border-bottom-right-radius:0}
+  .hos-service-detail{padding:16px;border-top:none;margin-top:-1px}
+  .hos-service-row{margin-bottom:14px}
   .hos-stat-band-grid{grid-template-columns:repeat(3,1fr);gap:12px}
   .hos-stat-label{font-size:11px;letter-spacing:.08em}
   .hos-stat-num,.hos-stat-prefix,.hos-stat-suffix{font-size:clamp(28px,6vw,48px)}
@@ -263,9 +291,6 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
   .hos-home-photos-grid{grid-template-columns:repeat(2,1fr)}
   .hos-sp-images{grid-template-columns:1fr}
   .hos-form-row,.hos-team-grid{grid-template-columns:1fr}
-  .hos-service-item{grid-template-columns:56px 36px 1fr 44px;gap:10px;padding:16px 12px}
-  .hos-service-thumb{width:56px;height:56px}
-  .hos-service-icon-img{width:28px;height:28px}
   .hos-cta-band-inner{flex-direction:column;text-align:center;align-items:center}
   .hos-cta-band-text{text-align:center}
   .hos-cta-band .hos-btn{width:100%;max-width:320px}
@@ -287,16 +312,22 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
   .hos-page-hero-title{font-size:clamp(28px,9vw,48px)}
   .hos-hero{min-height:min(78svh,640px)}
   .hos-page-hero{min-height:min(40svh,380px)}
+  [data-page="services"] .hos-page-hero{min-height:min(34svh,300px)}
+  [data-page="contact"] .hos-page-hero{min-height:min(32svh,280px)}
   .hos-sp-grid{grid-template-columns:1fr}
   .hos-sp-card-label{padding:18px 14px}
   .hos-sp-card .hos-heading-card{font-size:15px}
 }
 
 @media(max-width:520px){
-  .hos-service-item{grid-template-columns:36px 1fr 44px}
-  .hos-service-num,.hos-service-thumb{display:none}
-  .hos-service-title-row{gap:8px}
-  .hos-service-body p{font-size:14px;line-height:1.65}
+  .hos-form-embed iframe{min-height:980px;height:980px}
+  [data-page="services"] .hos-page-hero{min-height:min(32svh,280px)}
+  [data-page="contact"] .hos-page-hero{min-height:min(30svh,260px)}
+  .hos-service-thumb{height:clamp(112px,34vw,160px)}
+  .hos-service-num{padding-left:14px;font-size:18px}
+  .hos-service-body{padding:2px 14px 14px}
+  .hos-contact-info .hos-contact-card{padding:16px 18px}
+  .hos-contact-info .hos-contact-card a,.hos-contact-info .hos-contact-card p{font-size:14px;line-height:1.6}
   .hos-footer-social-link{width:64px;height:64px}
   .hos-footer-social-link img{width:28px;height:28px}
   .hos-footer-social{gap:12px}
