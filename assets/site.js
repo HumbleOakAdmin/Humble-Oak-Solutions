@@ -28,8 +28,11 @@
   });
 
   if (nav) {
+    var siteLogo = document.querySelector(".hos-site-logo");
     window.addEventListener("scroll", function () {
-      nav.classList.toggle("scrolled", window.scrollY > 60);
+      var scrolled = window.scrollY > 60;
+      nav.classList.toggle("scrolled", scrolled);
+      if (siteLogo) siteLogo.classList.toggle("scrolled", scrolled);
     });
   }
 
