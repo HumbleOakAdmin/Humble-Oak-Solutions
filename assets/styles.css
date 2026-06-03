@@ -12,17 +12,17 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{font-family:var(--font-sans);background:var(--cream);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-top:calc(var(--nav-collapsed-h) + 24px);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);min-width:0}
+body{font-family:var(--font-sans);background:var(--cream);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-top:calc(var(--nav-collapsed-h) + 12px);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);min-width:0}
 main{display:block;min-width:0}
 a{text-decoration:none}
 a:focus-visible,.hos-btn:focus-visible,.hos-nav-toggle:focus-visible,.hos-site-logo:focus-visible,.hos-nav-links a:focus-visible,.hos-nav-cta:focus-visible,.hos-footer-links a:focus-visible,.hos-footer-social-link:focus-visible,.hos-sp-card:focus-visible,.hos-service-item:focus-visible{outline:2px solid var(--logo-green);outline-offset:3px}
 img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--shadow-md)}
 
 /* —— Site logo (fixed top-left, mirrors nav) —— */
-.hos-site-logo{position:fixed;top:max(12px,env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));z-index:9999;display:flex;align-items:center;justify-content:center;height:44px;padding:0 10px;background:rgba(28,28,26,.92);backdrop-filter:blur(20px);border:1px solid rgba(196,163,90,.2);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);transition:top .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease)}
-.hos-site-logo:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
-.hos-site-logo.scrolled{top:10px}
-.hos-site-logo img{height:32px;width:auto;max-width:100px;object-fit:contain;border-radius:var(--radius);box-shadow:none}
+.hos-site-logo{position:fixed;top:max(6px,env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));z-index:9999;display:flex;align-items:center;justify-content:center;height:40px;padding:0 9px;background:transparent;border:none;border-radius:var(--radius-lg);box-shadow:none;transition:top .3s var(--ease),transform .3s var(--ease)}
+.hos-site-logo:hover{transform:translateY(-1px)}
+.hos-site-logo.scrolled{top:max(4px,env(safe-area-inset-top,0px))}
+.hos-site-logo img{height:29px;width:auto;max-width:90px;object-fit:contain;border-radius:var(--radius);box-shadow:none;background:transparent}
 
 /* —— Nav / hamburger —— */
 .hos-nav-backdrop{position:fixed;inset:0;z-index:9998;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s var(--ease),visibility .35s}
@@ -84,8 +84,8 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-quote-attribution{display:block;font-size:13px;margin-top:8px;font-style:normal;color:rgba(28,28,26,.5)}
 
 .hos-hero,.hos-page-hero{position:relative;display:flex;align-items:flex-end;overflow:hidden;border-radius:var(--radius)}
-.hos-hero{min-height:min(88svh,900px);padding:clamp(72px,12vw,100px) var(--section-pad-x) clamp(40px,8vw,80px);margin:0 var(--page-gutter);margin-top:8px;box-shadow:var(--shadow-lg)}
-.hos-page-hero{min-height:min(50svh,520px);padding:clamp(72px,12vw,100px) var(--section-pad-x) clamp(40px,8vw,80px);margin:0 var(--page-gutter);margin-top:8px;box-shadow:var(--shadow-md);background-size:cover;background-position:center}
+.hos-hero{min-height:min(88svh,900px);padding:clamp(64px,11vw,92px) var(--section-pad-x) clamp(40px,8vw,80px);margin:0 var(--page-gutter);margin-top:4px;box-shadow:var(--shadow-lg)}
+.hos-page-hero{min-height:min(50svh,520px);padding:clamp(64px,11vw,92px) var(--section-pad-x) clamp(40px,8vw,80px);margin:0 var(--page-gutter);margin-top:4px;box-shadow:var(--shadow-md);background-size:cover;background-position:center}
 .hos-hero-bg,.hos-hero-overlay,.hos-page-hero-overlay{position:absolute;inset:0;border-radius:inherit}
 .hos-hero-bg{background-size:cover;background-position:center}
 .hos-hero-overlay{background:linear-gradient(to top,rgba(28,28,26,.75),rgba(28,28,26,.15))}
@@ -254,8 +254,8 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 }
 
 @media(max-width:900px){
-  body{padding-top:calc(var(--nav-collapsed-h) + 16px)}
-  .hos-hero,.hos-page-hero{margin-left:12px;margin-right:12px;padding-top:clamp(64px,14vw,88px);min-height:min(72svh,720px)}
+  body{padding-top:calc(var(--nav-collapsed-h) + 8px)}
+  .hos-hero,.hos-page-hero{margin-left:12px;margin-right:12px;padding-top:clamp(56px,12vw,80px);min-height:min(72svh,720px)}
   .hos-page-hero{min-height:min(44svh,440px)}
   .hos-intro-inner,.hos-story-inner,.hos-about-mission-inner,.hos-about-exp-inner,.hos-contact-inner{grid-template-columns:1fr;gap:clamp(28px,5vw,36px)}
   .hos-contact-content .hos-contact-inner{display:flex;flex-direction:column;gap:clamp(24px,5vw,36px)}
