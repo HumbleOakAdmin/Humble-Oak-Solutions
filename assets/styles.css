@@ -21,7 +21,7 @@ a:focus-visible,.hos-btn:focus-visible,.hos-nav-toggle:focus-visible,.hos-site-l
 img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--shadow-md)}
 
 /* —— Site logo (fixed top-left, mirrors nav) —— */
-.hos-site-logo{position:fixed;top:var(--header-chip-top);left:max(12px,env(safe-area-inset-left,0px));z-index:9999;display:flex;align-items:center;justify-content:center;height:var(--header-chip-h);padding:0 9px;background:transparent;border:none;border-radius:0;box-shadow:none;transition:top .3s var(--ease),transform .3s var(--ease)}
+.hos-site-logo{position:fixed;top:var(--header-chip-top);left:max(12px,env(safe-area-inset-left,0px));right:auto;z-index:9999;display:flex;align-items:center;justify-content:center;width:fit-content;max-width:max-content;height:var(--header-chip-h);padding:0 9px;background:transparent;border:none;border-radius:0;box-shadow:none;transition:top .3s var(--ease),transform .3s var(--ease)}
 .hos-site-logo:hover{transform:translateY(-1px)}
 .hos-site-logo.scrolled{top:max(4px,env(safe-area-inset-top,0px))}
 .hos-site-logo img{height:29px;width:auto;max-width:90px;object-fit:contain;border-radius:0;box-shadow:none;background:transparent}
