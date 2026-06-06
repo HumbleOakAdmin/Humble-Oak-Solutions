@@ -33,6 +33,24 @@
     });
   }
 
+  var spParallaxBg = document.getElementById("hosSpParallaxBg");
+  if (spParallaxBg && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var spSection = spParallaxBg.closest(".hos-services-preview");
+    var spFactor = 0.35;
+
+    function updateServicesParallax() {
+      if (!spSection) return;
+      var rect = spSection.getBoundingClientRect();
+      var viewH = window.innerHeight || document.documentElement.clientHeight;
+      var progress = (rect.top + rect.height * 0.5 - viewH * 0.5) / (viewH + rect.height);
+      spParallaxBg.style.transform = "translate3d(0," + progress * viewH * spFactor + "px,0)";
+    }
+
+    window.addEventListener("scroll", updateServicesParallax, { passive: true });
+    window.addEventListener("resize", updateServicesParallax);
+    updateServicesParallax();
+  }
+
   var page = document.body.getAttribute("data-page");
   document.querySelectorAll(".hos-nav-link").forEach(function (link) {
     if (link.getAttribute("data-page") === page) link.classList.add("active");
