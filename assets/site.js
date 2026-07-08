@@ -212,57 +212,88 @@
 
 
 
-  var serviceItems = document.querySelectorAll(".hos-service-item[data-detail-id]");
+  function getServiceDetail(item) {
+    var row = item.closest(".hos-service-row");
+    return row ? row.querySelector(".hos-service-detail") : null;
+  }
 
-  serviceItems.forEach(function (item) {
+  function closeAllServiceRows() {
+    document.querySelectorAll(".hos-service-detail.open").forEach(function (d) {
+      d.classList.remove("open");
+      d.setAttribute("hidden", "");
+    });
+    document.querySelectorAll(".hos-service-item.is-open").forEach(function (i) {
+      i.classList.remove("is-open");
+      i.setAttribute("aria-expanded", "false");
+      var t = i.querySelector(".hos-service-toggle");
+      if (t) t.textContent = "+";
+    });
+  }
+
+  function openServiceRow(item) {
+    var detail = getServiceDetail(item);
+    var toggle = item.querySelector(".hos-service-toggle");
+    if (!detail) return;
+
+    closeAllServiceRows();
+    detail.classList.add("open");
+    detail.removeAttribute("hidden");
+    item.classList.add("is-open");
+    item.setAttribute("aria-expanded", "true");
+    if (toggle) toggle.textContent = "\u2212";
+  }
+
+  function toggleServiceRow(item) {
+    var detail = getServiceDetail(item);
+    if (!detail) return;
+
+    if (detail.classList.contains("open")) {
+      closeAllServiceRows();
+      return;
+    }
+
+    openServiceRow(item);
+  }
+
+  function openServiceFromHash() {
+    var hash = window.location.hash.replace("#", "");
+    if (!hash || hash.indexOf("svc-") !== 0) return;
+    var row = document.getElementById(hash);
+    var item = row
+      ? row.querySelector(".hos-service-item")
+      : document.querySelector('.hos-service-item[data-detail-id="' + hash + '"]');
+    if (!item) return;
+    openServiceRow(item);
+  }
+
+  document.querySelectorAll(".hos-service-item[data-detail-id]").forEach(function (item) {
+    item.setAttribute("role", "button");
+    item.setAttribute("tabindex", "0");
+    item.setAttribute("aria-expanded", "false");
 
     item.addEventListener("click", function () {
-
-      var row = item.closest(".hos-service-row");
-
-      if (!row) return;
-
-      var detail = row.querySelector(".hos-service-detail");
-
-      if (!detail) return;
-
-      var isOpen = item.classList.contains("is-open");
-
-      serviceItems.forEach(function (other) {
-
-        other.classList.remove("is-open");
-
-        var otherToggle = other.querySelector(".hos-service-toggle");
-
-        if (otherToggle) otherToggle.textContent = "+";
-
-        var otherRow = other.closest(".hos-service-row");
-
-        if (otherRow) {
-
-          var otherDetail = otherRow.querySelector(".hos-service-detail");
-
-          if (otherDetail) otherDetail.classList.remove("open");
-
-        }
-
-      });
-
-      if (!isOpen) {
-
-        item.classList.add("is-open");
-
-        detail.classList.add("open");
-
-        var toggle = item.querySelector(".hos-service-toggle");
-
-        if (toggle) toggle.textContent = "\u2212";
-
-      }
-
+      toggleServiceRow(item);
     });
 
+    item.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleServiceRow(item);
+      }
+    });
   });
+
+  document.querySelectorAll(".hos-service-detail-btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+
+  if (document.querySelector(".hos-service-item[data-detail-id]")) {
+    closeAllServiceRows();
+    window.addEventListener("load", openServiceFromHash);
+    window.addEventListener("hashchange", openServiceFromHash);
+  }
 
 
 
