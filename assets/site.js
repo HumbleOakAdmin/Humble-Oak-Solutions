@@ -1,5 +1,7 @@
 (function () {
 
+  document.documentElement.classList.add("js-enabled");
+
   var nav = document.getElementById("hosNav");
 
   var navToggle = document.getElementById("hosNavToggle");
@@ -55,6 +57,16 @@
     navToggle.addEventListener("click", function () {
 
       setNavOpen(!nav.classList.contains("is-open"));
+
+    });
+
+  }
+
+  if (navBackdrop) {
+
+    navBackdrop.addEventListener("click", function () {
+
+      setNavOpen(false);
 
     });
 
