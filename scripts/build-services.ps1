@@ -83,19 +83,6 @@ $services = @(
     intro = "Canadian programs can fund real growth—but applications are competitive and time-consuming. We have helped clients secure millions in grants and know how to tell your story clearly."
     bullets = @("Program identification and eligibility review","Narrative and budget development","Submission preparation and deadlines","Compliance and post-award reporting","Alignment to provincial and federal incentives")
     closing = "We translate your project into language funders understand—so you can invest in equipment, people, and expansion with confidence."
-  },
-  @{
-    slug = "erp-implementation"
-    num = "08"
-    title = "ERP Implementation & Support"
-    short = "Select, deploy, and optimize ERP platforms that connect finance, operations, and inventory—without derailing day-to-day business."
-    meta = "ERP implementation and support for growing businesses: selection, deployment, data migration, training, and ongoing optimization."
-    photo = "svc-erp-photo.jpg"
-    icon = "icon-erp.png"
-    iconClass = "hos-service-icon-img hos-service-icon-img--erp"
-    intro = "An ERP should unify your business—not overwhelm it. We guide selection, implementation, and adoption so your team actually uses the system and sees ROI."
-    bullets = @("ERP selection and requirements workshops","Phased implementation planning","Data migration and validation","Integration with existing tools","User training and post-go-live support")
-    closing = "From first vendor conversations through steady-state support, we keep ERP projects practical, on schedule, and aligned to how your business really operates."
   }
 )
 
