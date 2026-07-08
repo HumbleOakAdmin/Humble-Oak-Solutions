@@ -25,7 +25,20 @@
       <div class="hos-nav-links">
         <a href="/" class="hos-nav-link" data-page="home">Home</a>
         <a href="/about-us/" class="hos-nav-link" data-page="about">About</a>
-        <a href="/services/" class="hos-nav-link" data-page="services">Services</a>
+        <div class="hos-nav-services" data-nav-section="services">
+          <button type="button" class="hos-nav-link hos-nav-services-btn" id="hosNavServicesBtn" aria-expanded="false" aria-controls="hosNavServicesTray">Services</button>
+          <div class="hos-nav-services-tray" id="hosNavServicesTray" hidden>
+            <a href="/services/" class="hos-nav-services-overview">All Services</a>
+            <a href="/services/operations-consulting/" data-service-slug="operations-consulting">Operations Consulting</a>
+            <a href="/services/project-management/" data-service-slug="project-management">Project &amp; Site Management</a>
+            <a href="/services/web-development/" data-service-slug="web-development">Web Development &amp; Maintenance</a>
+            <a href="/services/it-systems/" data-service-slug="it-systems">IT Systems Administration</a>
+            <a href="/services/business-intelligence/" data-service-slug="business-intelligence">Business Intelligence</a>
+            <a href="/services/automation-integration/" data-service-slug="automation-integration">Automation &amp; Integration</a>
+            <a href="/services/government-funding/" data-service-slug="government-funding">Government Funding Applications</a>
+            <a href="/services/erp-implementation/" data-service-slug="erp-implementation">ERP Implementation &amp; Support</a>
+          </div>
+        </div>
         <a href="/our-team/" class="hos-nav-link" data-page="team">Team</a>
       </div>
       <a href="/contact-us/" class="hos-nav-cta">Get in Touch</a>
@@ -82,19 +95,19 @@
         <h2 class="hos-heading-section hos-anim">Our Services</h2>
         <p class="hos-body hos-sp-sub hos-anim">Humble Oak Solutions offers expert consulting in operations management, IT systems, automation, and business intelligence. We help small and mid-sized businesses streamline processes, modernize infrastructure, and scale with confidence.</p>
         <div class="hos-sp-grid">
-          <a href="/services/#svc-1" class="hos-sp-card hos-anim">
+          <a href="/services/operations-consulting/" class="hos-sp-card hos-anim">
             <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/home/home-sp-operations.jpg')" role="img" aria-label="Operations consulting"></div>
             <div class="hos-sp-card-label"><h4 class="hos-heading-card">Operations</h4></div>
           </a>
-          <a href="/services/#svc-2" class="hos-sp-card hos-anim">
+          <a href="/services/project-management/" class="hos-sp-card hos-anim">
             <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/home/home-sp-project-management.jpg')" role="img" aria-label="Project management"></div>
             <div class="hos-sp-card-label"><h4 class="hos-heading-card">Project Management</h4></div>
           </a>
-          <a href="/services/#svc-3" class="hos-sp-card hos-anim">
+          <a href="/services/web-development/" class="hos-sp-card hos-anim">
             <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/home/home-sp-web-development.jpg')" role="img" aria-label="Web development"></div>
             <div class="hos-sp-card-label"><h4 class="hos-heading-card">Web Development</h4></div>
           </a>
-          <a href="/services/#svc-4" class="hos-sp-card hos-anim">
+          <a href="/services/it-systems/" class="hos-sp-card hos-anim">
             <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/home/home-sp-it-systems.jpg')" role="img" aria-label="IT systems"></div>
             <div class="hos-sp-card-label"><h4 class="hos-heading-card">IT Systems</h4></div>
           </a>
