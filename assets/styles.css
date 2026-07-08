@@ -175,7 +175,13 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-service-num{font-family:var(--font-serif);font-size:24px;color:var(--gold)}
 .hos-service-body .hos-heading-item{font-family:var(--font-serif);font-size:clamp(18px,3vw,22px);margin-bottom:0;font-weight:400;line-height:1.25;color:var(--charcoal)}
 .hos-service-body p{font-size:15px;line-height:1.7;color:rgba(28,28,26,.62);margin-top:8px;font-weight:300}
-.hos-service-toggle{font-size:20px;font-weight:400;color:var(--gold);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(196,163,90,.12);border-radius:var(--radius);pointer-events:none;flex-shrink:0}
+.hos-service-toggle{font-size:24px;font-weight:400;color:var(--gold);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(196,163,90,.12);border-radius:var(--radius);pointer-events:none;flex-shrink:0;transition:background .25s,color .25s}
+.hos-service-item.is-open{background:#fff;box-shadow:var(--shadow-md);border-color:rgba(196,163,90,.25);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.hos-service-item.is-open .hos-service-toggle{background:var(--gold);color:var(--cream)}
+.hos-service-detail{display:none;padding:clamp(6px,1.5vw,10px) clamp(16px,2.5vw,22px) clamp(20px,3vw,26px);border:1px solid rgba(196,163,90,.25);border-top:none;border-radius:0 0 var(--radius) var(--radius);background:#fff;box-shadow:var(--shadow-md)}
+.hos-service-detail.open{display:block}
+.hos-service-detail p{font-size:15px;line-height:1.75;color:rgba(28,28,26,.66);font-weight:300;max-width:760px}
+.hos-service-detail-btn{margin-top:18px}
 .hos-services-intro-inner{max-width:900px;margin:0 auto;text-align:center}
 .hos-services-intro-inner .hos-body-sm{margin-top:12px}
 
