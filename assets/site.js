@@ -62,16 +62,6 @@
 
   }
 
-  if (navBackdrop) {
-
-    navBackdrop.addEventListener("click", function () {
-
-      setNavOpen(false);
-
-    });
-
-  }
-
 
 
   if (navServicesBtn) {
