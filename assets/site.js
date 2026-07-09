@@ -28,7 +28,9 @@
 
     if (navBackdrop) navBackdrop.classList.toggle("is-visible", open);
 
-    if (!open) setServicesTrayOpen(false);
+    if (open) setServicesTrayOpen(false);
+
+    else setServicesTrayOpen(false);
 
   }
 
@@ -85,6 +87,12 @@
     });
 
   }
+
+  window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 900) setServicesTrayOpen(false);
+
+  });
 
 
 

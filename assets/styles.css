@@ -44,9 +44,13 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
 .hos-nav-services{position:relative;width:100%}
 .hos-nav-services-btn{width:100%;text-align:left;border:none;background:transparent;cursor:pointer;font-family:inherit}
 .hos-nav-services-tray{position:absolute;right:calc(100% + 12px);top:0;min-width:min(280px,calc(100vw - 48px));max-height:min(70vh,420px);overflow:auto;background:rgba(28,28,26,.97);backdrop-filter:blur(20px);border:1px solid rgba(196,163,90,.28);border-radius:var(--radius-lg);padding:10px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;gap:2px;z-index:10001;opacity:0;visibility:hidden;transform:translateX(10px);transition:opacity .28s var(--ease),transform .28s var(--ease),visibility .28s;pointer-events:none}
-.hos-nav-services-tray[hidden]{display:flex}
+.hos-nav-services-tray[hidden]{display:none}
 .hos-nav-services.is-open .hos-nav-services-tray{opacity:1;visibility:visible;transform:translateX(0);pointer-events:auto}
 .hos-nav:not(.is-open) .hos-nav-services-tray{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(10px)}
+
+@media(min-width:901px){
+  .hos-nav-services-tray[hidden]{display:flex;opacity:0;visibility:hidden;pointer-events:none}
+}
 .hos-nav-services-tray a{display:block;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,244,238,.72);padding:10px 12px;border-radius:var(--radius);transition:background .25s,color .25s}
 .hos-nav-services-tray a:hover,.hos-nav-services-tray a.active{color:var(--cream);background:rgba(247,244,238,.1)}
 .hos-nav-services-tray .hos-nav-services-overview{color:var(--gold);font-weight:600;margin-bottom:4px}
@@ -308,14 +312,9 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-service-icon-img{width:32px;height:32px;flex-shrink:0}
   .hos-service-body p{margin-top:10px;font-size:14px;line-height:1.65}
   .hos-service-item.is-open{border-bottom-left-radius:0;border-bottom-right-radius:0}
-  .hos-nav-services-tray{position:static;right:auto;top:auto;min-width:0;width:100%;max-height:none;margin-top:6px;transform:none;opacity:1;visibility:visible;pointer-events:auto;border:1px solid rgba(247,244,238,.12);padding:8px;display:none}
-  .hos-nav-services.is-open .hos-nav-services-tray{display:flex}
   .hos-service-detail-actions .hos-btn{width:100%;max-width:320px;text-align:center}
   .hos-service-detail{padding:16px 16px 22px}
   .hos-service-detail-btn{margin-top:24px}
-  .hos-stat-band-grid{grid-template-columns:repeat(3,1fr);gap:12px}
-  .hos-stat-label{font-size:11px;letter-spacing:.08em}
-  .hos-stat-num,.hos-stat-prefix,.hos-stat-suffix{font-size:clamp(28px,6vw,48px)}
   .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-values-grid{grid-template-columns:1fr}
   .hos-home-photos-grid{grid-template-columns:repeat(2,1fr)}
@@ -334,6 +333,20 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-nav-logo img{height:96px;width:96px;max-height:96px;max-width:96px}
 }
 
+@media(max-width:900px){
+  .hos-nav.is-open .hos-nav-panel{max-height:min(88svh,640px);overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .hos-nav-services-tray{position:static;right:auto;top:auto;min-width:0;width:100%;max-height:0;margin:0;padding:0;border:none;box-shadow:none;background:transparent;backdrop-filter:none;transform:none;opacity:0;visibility:hidden;overflow:hidden;pointer-events:none;gap:2px;transition:max-height .3s var(--ease),opacity .25s var(--ease),margin .25s var(--ease),padding .25s var(--ease),visibility .25s}
+  .hos-nav-services.is-open .hos-nav-services-tray{max-height:min(42vh,260px);margin-top:6px;padding:8px;border:1px solid rgba(247,244,238,.12);background:rgba(28,28,26,.55);opacity:1;visibility:visible;overflow-y:auto;pointer-events:auto;-webkit-overflow-scrolling:touch}
+  .hos-nav-services-tray[hidden]{display:none!important;max-height:0;margin:0;padding:0;border:none;opacity:0;visibility:hidden}
+  .hos-nav-services-tray a{font-size:12px;padding:12px 14px;min-height:44px;display:flex;align-items:center}
+  .hos-nav-services-btn{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .hos-nav-services-btn::after{content:"+";font-size:18px;line-height:1;color:var(--gold);flex-shrink:0}
+  .hos-nav-services.is-open .hos-nav-services-btn::after{content:"\2212"}
+  .hos-stat-band-grid{grid-template-columns:repeat(2,1fr)}
+  .hos-stat-label{font-size:11px;letter-spacing:.08em}
+  .hos-stat-num,.hos-stat-prefix,.hos-stat-suffix{font-size:clamp(28px,6vw,48px)}
+}
+
 @media(max-width:640px){
   .hos-stat-band-grid{grid-template-columns:1fr}
   .hos-home-photos-grid{grid-template-columns:1fr}
@@ -350,6 +363,10 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 }
 
 @media(max-width:520px){
+  .hos-nav.is-open{width:min(300px,calc(100% - 20px - env(safe-area-inset-right,0px) - env(safe-area-inset-left,0px)));padding:16px 18px 20px}
+  .hos-nav-links a,.hos-nav-services-btn{font-size:12px;padding:11px 14px}
+  .hos-nav-logo img{height:80px;width:80px;max-height:80px;max-width:80px}
+  .hos-nav-services.is-open .hos-nav-services-tray{max-height:min(38vh,220px)}
   .hos-form-embed iframe{min-height:min(92svh,980px);height:min(92svh,980px)}
   [data-page="services"] .hos-page-hero{min-height:min(32svh,280px)}
   [data-page="contact"] .hos-page-hero{min-height:min(30svh,260px)}
