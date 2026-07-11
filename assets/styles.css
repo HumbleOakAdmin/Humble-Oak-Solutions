@@ -171,17 +171,15 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 .hos-service-detail-hero-title{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
 .hos-service-detail-hero-title .hos-service-icon-img{width:48px;height:48px;box-shadow:none;border-radius:0}
 .hos-service-detail-content{background:var(--cream)}
+.hos-service-detail-content--continued{padding-top:clamp(32px,5vw,48px)}
 .hos-service-detail-inner{max-width:760px;margin:0 auto;min-width:0}
 .hos-service-detail-inner .hos-heading-section{font-size:clamp(22px,3.5vw,32px);margin-top:clamp(28px,5vw,40px);margin-bottom:14px}
-.hos-service-detail-inner .hos-heading-section:first-of-type{margin-top:clamp(20px,4vw,28px)}
+.hos-service-detail-inner .hos-heading-section:first-of-type{margin-top:0}
 .hos-service-detail-inner .hos-heading-sub{font-size:clamp(18px,2.8vw,22px);margin:clamp(22px,4vw,32px) 0 12px}
 .hos-service-detail-list{margin:16px 0 24px;padding-left:1.25rem}
 .hos-service-detail-list li{font-size:16px;line-height:1.75;color:rgba(28,28,26,.68);margin-bottom:10px;font-weight:300}
 .hos-service-detail-list li:last-child{margin-bottom:0}
-.hos-service-impact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:clamp(20px,4vw,28px) 0 clamp(8px,2vw,16px)}
-.hos-service-impact-item{background:var(--cream-dark);border:1px solid rgba(28,28,26,.08);border-radius:var(--radius);padding:clamp(14px,2.5vw,18px) clamp(12px,2vw,16px);text-align:center;box-shadow:var(--shadow-sm)}
-.hos-service-impact-num{font-family:var(--font-serif);font-size:clamp(22px,4vw,28px);color:var(--gold);line-height:1.15;margin-bottom:6px}
-.hos-service-impact-label{font-size:12px;line-height:1.45;color:rgba(28,28,26,.62);font-weight:400;letter-spacing:.02em}
+.hos-stat-band--service{margin-top:0;margin-bottom:0;padding:clamp(36px,6vw,56px) var(--section-pad-x)}
 .hos-service-detail-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,5vw,40px)}
 .hos-service-title-row{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
 .hos-service-thumb{width:72px;height:72px;border-radius:var(--radius);background-size:cover;background-position:center;flex-shrink:0;box-shadow:var(--shadow-md)}
@@ -322,7 +320,6 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-service-item.is-open{border-bottom-left-radius:0;border-bottom-right-radius:0}
   .hos-service-detail{padding:16px 16px 22px}
   .hos-service-detail-btn{margin-top:24px}
-  .hos-service-impact{grid-template-columns:1fr;gap:10px}
   .hos-service-detail-actions .hos-btn{width:100%;max-width:320px;text-align:center}
   .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-values-grid{grid-template-columns:1fr}

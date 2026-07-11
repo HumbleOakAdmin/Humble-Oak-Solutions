@@ -39,15 +39,7 @@ function Update-ServicePage {
         <p class="hos-page-hero-sub hos-anim">$HeroSub</p>
       </div>
     </section>
-    <section class="hos-service-detail-content hos-section">
-      <div class="hos-service-detail-inner hos-prose">
 $BodyHtml
-        <div class="hos-service-detail-actions hos-anim">
-          <a href="/contact-us/" class="hos-btn hos-btn-gold">Discuss This Service</a>
-          <a href="/services/" class="hos-btn hos-btn-dark">All Services</a>
-        </div>
-      </div>
-    </section>
   </main>
 "@
 
@@ -64,12 +56,22 @@ Update-ServicePage -Slug "operations-consulting" `
   -HeroSub "Practical operations support that removes bottlenecks, improves throughput, and builds repeatable processes your team can sustain." `
   -Photo "svc-ops-photo.jpg" -Icon "icon-consultation.png" -IconClass "" `
   -BodyHtml @'
+    <section class="hos-service-detail-content hos-section">
+      <div class="hos-service-detail-inner hos-prose">
         <p class="hos-lead hos-anim">We help growing Canadian teams run leaner without adding headcount. From shop floor to back office, we map how work actually flows and remove friction that slows you down.</p>
-        <div class="hos-service-impact hos-anim" aria-label="Representative results">
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">+293%</div><div class="hos-service-impact-label">Productivity lift after inventory and process redesign</div></div>
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">-34%</div><div class="hos-service-impact-label">Order cycle time reduction through workflow redesign</div></div>
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">+31%</div><div class="hos-service-impact-label">Revenue impact from throughput and line-layout improvements</div></div>
+      </div>
+    </section>
+    <section class="hos-stat-band hos-stat-band--service" aria-label="Representative results">
+      <div class="hos-stat-band-inner">
+        <div class="hos-stat-band-grid">
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="293">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Productivity Lift</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">&minus;</span><span class="hos-stat-num" data-target="34">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Order Cycle Time</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="31">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Revenue Impact</div></div>
         </div>
+      </div>
+    </section>
+    <section class="hos-service-detail-content hos-section hos-service-detail-content--continued">
+      <div class="hos-service-detail-inner hos-prose">
         <h2 class="hos-heading-section hos-anim">What We Deliver</h2>
         <ul class="hos-service-detail-list hos-anim">
           <li>Process mapping, bottleneck analysis, and value-stream review</li>
@@ -82,6 +84,12 @@ Update-ServicePage -Slug "operations-consulting" `
         <h2 class="hos-heading-section hos-anim">How We Work</h2>
         <p class="hos-anim">We start with how work really happens on the floor&mdash;not how it looks on a slide. That means reviewing material flow, work queues, schedule adherence, WIP, and the handoffs that create delay. Then we redesign the process, document the new standard, and coach the team so gains stick.</p>
         <p class="hos-anim">Our experience spans manufacturing, warehousing, logistics, and production planning environments, including ERP-supported scheduling and shop-order execution. The goal is always the same: clearer priorities, fewer fire drills, and measurable improvement.</p>
+        <div class="hos-service-detail-actions hos-anim">
+          <a href="/contact-us/" class="hos-btn hos-btn-gold">Discuss This Service</a>
+          <a href="/services/" class="hos-btn hos-btn-dark">All Services</a>
+        </div>
+      </div>
+    </section>
 '@
 
 # —— Project & Site Management ——
@@ -116,12 +124,22 @@ Update-ServicePage -Slug "government-funding" `
   -HeroSub "Secure growth capital with practical grant strategy, strong narratives, and submissions that speak the language funders expect." `
   -Photo "svc-gov-photo.jpg" -Icon "icon-application.png" -IconClass "" `
   -BodyHtml @'
+    <section class="hos-service-detail-content hos-section">
+      <div class="hos-service-detail-inner hos-prose">
         <p class="hos-lead hos-anim">Canadian programs can fund real growth, but applications are competitive and time-consuming. We help organizations identify the right programs, build a clear case, and submit work that stands up to review.</p>
-        <div class="hos-service-impact hos-anim" aria-label="Funding impact">
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">$4.5M+</div><div class="hos-service-impact-label">Government funding secured for infrastructure and equipment</div></div>
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">Multi-M</div><div class="hos-service-impact-label">Track record supporting multimillion-dollar growth initiatives</div></div>
-          <div class="hos-service-impact-item"><div class="hos-service-impact-num">End-to-end</div><div class="hos-service-impact-label">From eligibility review through submission and reporting support</div></div>
+      </div>
+    </section>
+    <section class="hos-stat-band hos-stat-band--service" aria-label="Funding impact">
+      <div class="hos-stat-band-inner">
+        <div class="hos-stat-band-grid">
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">$</span><span class="hos-stat-num" data-target="4">0</span><span class="hos-stat-suffix">.5M+</span><div class="hos-stat-label">Funding Secured</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-num" data-target="5">0</span><span class="hos-stat-suffix">M+</span><div class="hos-stat-label">Multimillion Track Record</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-num" data-target="100">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">End-to-End Support</div></div>
         </div>
+      </div>
+    </section>
+    <section class="hos-service-detail-content hos-section hos-service-detail-content--continued">
+      <div class="hos-service-detail-inner hos-prose">
         <h2 class="hos-heading-section hos-anim">What We Deliver</h2>
         <ul class="hos-service-detail-list hos-anim">
           <li>Program identification and eligibility review</li>
@@ -133,6 +151,12 @@ Update-ServicePage -Slug "government-funding" `
         </ul>
         <h2 class="hos-heading-section hos-anim">Why It Matters</h2>
         <p class="hos-anim">Strong applications connect your project to measurable impact: capacity, productivity, safety, equipment modernization, or expansion. We translate operational plans into funder-ready language so you can invest in people, equipment, and infrastructure with confidence.</p>
+        <div class="hos-service-detail-actions hos-anim">
+          <a href="/contact-us/" class="hos-btn hos-btn-gold">Discuss This Service</a>
+          <a href="/services/" class="hos-btn hos-btn-dark">All Services</a>
+        </div>
+      </div>
+    </section>
 '@
 
 # —— Web Development ——
