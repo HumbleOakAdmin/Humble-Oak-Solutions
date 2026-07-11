@@ -167,14 +167,22 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 .hos-service-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);background:#fff}
 .hos-service-icon-img{width:40px;height:40px;object-fit:contain;display:block;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
 .hos-service-icon-img--erp{filter:none}
-.hos-service-detail-hero .hos-page-hero-title{font-size:clamp(28px,5vw,52px);margin-bottom:0}
+.hos-service-detail-hero .hos-page-hero-title{font-size:clamp(24px,4.6vw,48px);margin-bottom:0;max-width:18ch}
 .hos-service-detail-hero-title{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
 .hos-service-detail-hero-title .hos-service-icon-img{width:48px;height:48px;box-shadow:none;border-radius:0}
 .hos-service-detail-content{background:var(--cream)}
-.hos-service-detail-inner{max-width:760px;margin:0 auto}
-.hos-service-detail-list{margin:20px 0 28px;padding-left:1.25rem}
+.hos-service-detail-inner{max-width:760px;margin:0 auto;min-width:0}
+.hos-service-detail-inner .hos-heading-section{font-size:clamp(22px,3.5vw,32px);margin-top:clamp(28px,5vw,40px);margin-bottom:14px}
+.hos-service-detail-inner .hos-heading-section:first-of-type{margin-top:clamp(20px,4vw,28px)}
+.hos-service-detail-inner .hos-heading-sub{font-size:clamp(18px,2.8vw,22px);margin:clamp(22px,4vw,32px) 0 12px}
+.hos-service-detail-list{margin:16px 0 24px;padding-left:1.25rem}
 .hos-service-detail-list li{font-size:16px;line-height:1.75;color:rgba(28,28,26,.68);margin-bottom:10px;font-weight:300}
-.hos-service-detail-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hos-service-detail-list li:last-child{margin-bottom:0}
+.hos-service-impact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:clamp(20px,4vw,28px) 0 clamp(8px,2vw,16px)}
+.hos-service-impact-item{background:var(--cream-dark);border:1px solid rgba(28,28,26,.08);border-radius:var(--radius);padding:clamp(14px,2.5vw,18px) clamp(12px,2vw,16px);text-align:center;box-shadow:var(--shadow-sm)}
+.hos-service-impact-num{font-family:var(--font-serif);font-size:clamp(22px,4vw,28px);color:var(--gold);line-height:1.15;margin-bottom:6px}
+.hos-service-impact-label{font-size:12px;line-height:1.45;color:rgba(28,28,26,.62);font-weight:400;letter-spacing:.02em}
+.hos-service-detail-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,5vw,40px)}
 .hos-service-title-row{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
 .hos-service-thumb{width:72px;height:72px;border-radius:var(--radius);background-size:cover;background-position:center;flex-shrink:0;box-shadow:var(--shadow-md)}
 .hos-service-num{font-family:var(--font-serif);font-size:24px;color:var(--gold)}
@@ -312,9 +320,10 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-service-icon-img{width:32px;height:32px;flex-shrink:0}
   .hos-service-body p{margin-top:10px;font-size:14px;line-height:1.65}
   .hos-service-item.is-open{border-bottom-left-radius:0;border-bottom-right-radius:0}
-  .hos-service-detail-actions .hos-btn{width:100%;max-width:320px;text-align:center}
   .hos-service-detail{padding:16px 16px 22px}
   .hos-service-detail-btn{margin-top:24px}
+  .hos-service-impact{grid-template-columns:1fr;gap:10px}
+  .hos-service-detail-actions .hos-btn{width:100%;max-width:320px;text-align:center}
   .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-values-grid{grid-template-columns:1fr}
   .hos-home-photos-grid{grid-template-columns:repeat(2,1fr)}
