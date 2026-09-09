@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-23RFHMH5Q3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,7 +33,7 @@
   <meta name="twitter:image" content="https://www.humbleoaksolutions.com/assets/Site%20Images/home/home-hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/styles.css">
   <script type="application/ld+json">
   {
@@ -70,6 +70,8 @@
   </script>
 </head>
 <body data-page="home">
+  <a class="hos-skip" href="#main">Skip to content</a>
+  <div class="hos-progress" id="hosProgress" role="progressbar" aria-hidden="true"></div>
   <div class="hos-nav-backdrop" id="hosNavBackdrop" aria-hidden="true"></div>
   <nav class="hos-nav" id="hosNav" aria-label="Main navigation">
     <button type="button" class="hos-nav-toggle" id="hosNavToggle" aria-label="Open menu" aria-expanded="false" aria-controls="hosNavPanel">
@@ -99,7 +101,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <section class="hos-hero">
       <div class="hos-hero-bg" style="background-image:url('/assets/Site Images/home/home-hero.jpg')"></div>
       <div class="hos-hero-overlay"></div>
@@ -113,6 +115,25 @@
         </div>
       </div>
     </section>
+
+    <div class="hos-marquee" aria-hidden="true">
+      <div class="hos-marquee-track">
+        <span>Operations Consulting</span>
+        <span>Project &amp; Site Management</span>
+        <span>Web Development</span>
+        <span>IT Systems</span>
+        <span>Business Intelligence</span>
+        <span>Automation &amp; Integration</span>
+        <span>Government Funding</span>
+        <span>Operations Consulting</span>
+        <span>Project &amp; Site Management</span>
+        <span>Web Development</span>
+        <span>IT Systems</span>
+        <span>Business Intelligence</span>
+        <span>Automation &amp; Integration</span>
+        <span>Government Funding</span>
+      </div>
+    </div>
 
     <section class="hos-section">
       <div class="hos-intro-inner">
@@ -164,6 +185,18 @@
           <a href="/services/it-systems/" class="hos-sp-card hos-anim">
             <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/home/home-sp-it-systems.jpg')" role="img" aria-label="IT systems"></div>
             <div class="hos-sp-card-label"><h4 class="hos-heading-card">IT Systems</h4></div>
+          </a>
+          <a href="/services/business-intelligence/" class="hos-sp-card hos-anim">
+            <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/services/svc-bi-photo.jpg')" role="img" aria-label="Business intelligence"></div>
+            <div class="hos-sp-card-label"><h4 class="hos-heading-card">Business Intelligence</h4></div>
+          </a>
+          <a href="/services/automation-integration/" class="hos-sp-card hos-anim">
+            <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/services/svc-automation-photo.jpg')" role="img" aria-label="Automation and integration"></div>
+            <div class="hos-sp-card-label"><h4 class="hos-heading-card">Automation</h4></div>
+          </a>
+          <a href="/services/government-funding/" class="hos-sp-card hos-anim">
+            <div class="hos-sp-card-media" style="background-image:url('/assets/Site Images/services/svc-gov-photo.jpg')" role="img" aria-label="Government funding"></div>
+            <div class="hos-sp-card-label"><h4 class="hos-heading-card">Government Funding</h4></div>
           </a>
         </div>
         <div class="hos-sp-cta-wrap">
