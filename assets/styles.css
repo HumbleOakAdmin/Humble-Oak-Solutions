@@ -147,13 +147,11 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 .hos-about-mission-text .hos-lead{margin-bottom:24px;font-size:clamp(17px,2.2vw,20px);font-weight:500}
 
 .hos-stat-band{background:linear-gradient(165deg,var(--charcoal) 0%,#262622 100%);padding:clamp(48px,8vw,80px) var(--section-pad-x);text-align:center;color:var(--cream);margin:0 var(--page-gutter);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);border:1px solid rgba(196,163,90,.14)}
-.hos-stat-band-grid,.hos-sp-grid,.hos-values-grid{display:grid;gap:clamp(16px,3vw,28px)}
+.hos-stat-band-grid,.hos-values-grid{display:grid;gap:clamp(16px,3vw,28px)}
 .hos-stat-band-grid{grid-template-columns:repeat(3,1fr)}
 .hos-values-grid{grid-template-columns:repeat(3,1fr)}
-.hos-sp-grid{grid-template-columns:repeat(4,1fr)}
-@media(min-width:1101px){
-  .hos-sp-grid .hos-sp-card:nth-child(5){grid-column:2}
-}
+.hos-sp-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;--sp-gap:clamp(16px,3vw,28px);gap:var(--sp-gap)}
+.hos-sp-grid .hos-sp-card{flex:0 0 calc((100% - (var(--sp-gap) * 3)) / 4);width:calc((100% - (var(--sp-gap) * 3)) / 4);max-width:calc((100% - (var(--sp-gap) * 3)) / 4);min-width:0}
 .hos-stat-band-inner{max-width:1200px;margin:0 auto}
 .hos-stat-band .hos-heading-section{margin-bottom:12px}
 .hos-stat-band .hos-body{margin-bottom:clamp(28px,5vw,48px)}
@@ -181,9 +179,9 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 .hos-sp-sub{max-width:650px;margin:0 auto 48px}
 .hos-sp-card{display:flex;flex-direction:column;background:rgba(247,244,238,.92);color:var(--charcoal);text-align:center;border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease);border:1px solid rgba(247,244,238,.2)}
 .hos-sp-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
-.hos-sp-card-media{height:clamp(120px,18vw,168px);background-size:cover;background-position:center;transition:transform .7s var(--ease)}
+.hos-sp-card-media{height:160px;flex:0 0 160px;background-size:cover;background-position:center;transition:transform .7s var(--ease)}
 .hos-sp-card:hover .hos-sp-card-media{transform:scale(1.06)}
-.hos-sp-card-label{padding:22px 16px;background:inherit}
+.hos-sp-card-label{padding:20px 14px;background:inherit;min-height:72px;display:flex;align-items:center;justify-content:center}
 .hos-sp-icon{font-size:32px;margin-bottom:14px}
 .hos-sp-card .hos-heading-card{font-size:16px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:0}
 .hos-sp-cta-wrap{margin-top:56px;padding-top:8px}
@@ -325,8 +323,7 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
 }
 
 @media(max-width:1100px){
-  .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
-  .hos-sp-grid .hos-sp-card:nth-child(5){grid-column:auto}
+  .hos-sp-grid .hos-sp-card{flex-basis:calc((100% - var(--sp-gap)) / 2);width:calc((100% - var(--sp-gap)) / 2);max-width:calc((100% - var(--sp-gap)) / 2)}
   .hos-values-grid{grid-template-columns:repeat(2,1fr)}
   .hos-stat-band-grid{grid-template-columns:repeat(2,1fr)}
   .hos-service-item{grid-template-columns:64px 48px 1fr auto;gap:clamp(8px,1.5vw,14px);padding:clamp(14px,2.5vw,20px) clamp(12px,2vw,18px)}
@@ -371,7 +368,6 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-service-detail.open{padding:16px 16px 22px}
   .hos-service-detail-btn{margin-top:24px}
   .hos-service-detail-actions .hos-btn{width:100%;max-width:320px;text-align:center}
-  .hos-sp-grid{grid-template-columns:repeat(2,1fr)}
   .hos-values-grid{grid-template-columns:1fr}
   .hos-form-row,.hos-team-grid{grid-template-columns:1fr}
   .hos-team-card-photo{height:auto;max-width:min(100%,320px);margin-inline:auto;object-fit:cover;object-position:center top}
@@ -412,8 +408,8 @@ html:not(.js-enabled) .hos-anim{opacity:1;transform:none}
   .hos-page-hero{min-height:min(40svh,380px)}
   [data-page="services"] .hos-page-hero{min-height:min(34svh,300px)}
   [data-page="contact"] .hos-page-hero{min-height:min(32svh,280px)}
-  .hos-sp-grid{grid-template-columns:1fr}
-  .hos-sp-card-label{padding:18px 14px}
+  .hos-sp-grid .hos-sp-card{flex-basis:100%;width:100%;max-width:none}
+  .hos-sp-card-label{padding:18px 14px;min-height:0}
   .hos-sp-card .hos-heading-card{font-size:15px}
 }
 
