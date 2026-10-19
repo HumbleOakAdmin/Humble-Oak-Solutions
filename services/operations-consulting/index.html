@@ -1,39 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-23RFHMH5Q3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-23RFHMH5Q3");
+    window.addEventListener("load", function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-23RFHMH5Q3";
+      document.head.appendChild(s);
+    });
   </script>
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.humbleoaksolutions.com/services/operations-consulting/">
-  <title>Operations Consulting | Humble Oak Solutions</title>
-  <meta name="description" content="Hands-on operations consulting for BC manufacturers and SMBs: workflows, inventory, lean improvement, and results you can measure.">
+  <title>Operations Consulting in BC | Humble Oak</title>
+  <meta name="description" content="Shop-floor operations consulting in British Columbia: process mapping, lean improvement, inventory, and KPIs for manufacturers and SMBs.">
   <meta name="theme-color" content="#1C1C1A">
   <meta name="author" content="Humble Oak Solutions">
   <link rel="icon" href="/assets/Site Images/shared/logo-webflow-small.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/Site Images/shared/logo-webflow-small.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Humble Oak Solutions">
-  <meta property="og:title" content="Operations Consulting | Humble Oak Solutions">
-  <meta property="og:description" content="Hands-on operations consulting for BC manufacturers and SMBs: workflows, inventory, lean improvement, and results you can measure.">
+  <meta property="og:title" content="Operations Consulting in BC | Humble Oak">
+  <meta property="og:description" content="Shop-floor operations consulting in British Columbia: process mapping, lean improvement, inventory, and KPIs for manufacturers and SMBs.">
   <meta property="og:url" content="https://www.humbleoaksolutions.com/services/operations-consulting/">
   <meta property="og:image" content="https://www.humbleoaksolutions.com/assets/Site%20Images/services/svc-ops-photo.jpg">
+  <meta property="og:image:alt" content="Operations team reviewing work on site">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="934">
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Operations Consulting | Humble Oak Solutions">
-  <meta name="twitter:description" content="Hands-on operations consulting for BC manufacturers and SMBs: workflows, inventory, lean improvement, and results you can measure.">
+  <meta name="twitter:title" content="Operations Consulting in BC | Humble Oak">
+  <meta name="twitter:description" content="Shop-floor operations consulting in British Columbia: process mapping, lean improvement, inventory, and KPIs for manufacturers and SMBs.">
   <meta name="twitter:image" content="https://www.humbleoaksolutions.com/assets/Site%20Images/services/svc-ops-photo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/f2.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/f9.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <link rel="stylesheet" href="/assets/styles.css">
   <script type="application/ld+json">
   {
@@ -99,7 +107,8 @@
     </div>
   </nav>
       <main id="main">
-    <section class="hos-page-hero hos-service-detail-hero" style="background-image:url('/assets/Site Images/services/svc-ops-photo.jpg')">
+    <section class="hos-page-hero hos-service-detail-hero">
+      <img class="hos-page-hero-img" src="/assets/Site Images/services/svc-ops-photo.webp" alt="Operations team reviewing work on site" width="1400" height="934" fetchpriority="high" decoding="async">
       <div class="hos-page-hero-overlay"></div>
       <div class="hos-page-hero-content">
         <p class="hos-page-hero-tag hos-anim">Our Services</p>
@@ -112,15 +121,16 @@
     </section>
     <section class="hos-service-detail-content hos-section">
       <div class="hos-service-detail-inner hos-prose">
+        <nav class="hos-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/services/">Services</a><span aria-hidden="true">/</span><span>Operations Consulting</span></nav>
         <p class="hos-lead hos-anim">Most small business owners don&rsquo;t have time to map every bottleneck on the floor. We do that work with you&mdash;then leave you with processes your team can actually run.</p>
       </div>
     </section>
     <section class="hos-stat-band hos-stat-band--service" aria-label="Representative results">
       <div class="hos-stat-band-inner">
         <div class="hos-stat-band-grid">
-          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="293">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Productivity Lift</div></div>
-          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">&minus;</span><span class="hos-stat-num" data-target="34">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Order Cycle Time</div></div>
-          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="31">0</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Revenue Impact</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="293">293</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Productivity Lift</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">&minus;</span><span class="hos-stat-num" data-target="34">34</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Order Cycle Time</div></div>
+          <div class="hos-stat-item hos-anim"><span class="hos-stat-prefix">+</span><span class="hos-stat-num" data-target="31">31</span><span class="hos-stat-suffix">%</span><div class="hos-stat-label">Revenue Impact</div></div>
         </div>
       </div>
     </section>
@@ -137,6 +147,21 @@
         <h2 class="hos-heading-section hos-anim">How We Show Up</h2>
         <p class="hos-anim">We start on the floor, not in a slide deck. Material flow, work queues, WIP, handoffs&mdash;whatever is slowing you down. Then we redesign the process, write it down, and coach the team so the gains don&rsquo;t disappear after we leave.</p>
         <p class="hos-anim">That experience covers manufacturing, warehousing, logistics, and production planning&mdash;including shops that live in an ERP every day. The goal is simple: fewer fire drills, clearer priorities, and numbers that move in the right direction.</p>
+                <h2 class="hos-heading-section">Common Questions</h2>
+        <div class="hos-faq">
+          <details>
+            <summary>Do you work on the floor, or from a slide deck?</summary>
+            <p>On the floor. We map how work actually moves, then write the process down so the team can run it after we leave.</p>
+          </details>
+          <details>
+            <summary>Can this connect to funding or IT work?</summary>
+            <p>Yes. A cleaner process often supports a <a class="hos-text-link" href="/services/government-funding/">funding application</a> or a <a class="hos-text-link" href="/services/business-intelligence/">KPI dashboard</a>. We only add that when it helps the same goal.</p>
+          </details>
+          <details>
+            <summary>Will you publish our company name?</summary>
+            <p>No. Results on this site are representative. We do not name clients.</p>
+          </details>
+        </div>
         <div class="hos-service-detail-actions hos-anim">
           <a href="/contact-us/" class="hos-btn hos-btn-gold">Discuss This Service</a>
           <a href="/services/" class="hos-btn hos-btn-dark">All Services</a>

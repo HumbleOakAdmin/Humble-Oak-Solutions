@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /insights/
 
 Sitemap: https://www.humbleoaksolutions.com/sitemap.xml

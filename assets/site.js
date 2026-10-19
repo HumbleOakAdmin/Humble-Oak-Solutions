@@ -238,6 +238,28 @@
     counters.forEach(function (el) { cObs.observe(el); });
   }
 
+  document.querySelectorAll("iframe[data-src]").forEach(function (frame) {
+    var wrap = frame.closest(".hos-form-embed");
+    function loadFrame() {
+      if (!frame.getAttribute("src")) frame.setAttribute("src", frame.getAttribute("data-src"));
+    }
+    frame.addEventListener("load", function () {
+      if (wrap) wrap.classList.remove("is-pending");
+    });
+    if (!("IntersectionObserver" in window)) {
+      loadFrame();
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        loadFrame();
+        io.disconnect();
+      });
+    }, { rootMargin: "240px" });
+    io.observe(frame);
+  });
+
   var form = document.getElementById("hosContactForm");
   if (form) {
     form.addEventListener("submit", function (e) {

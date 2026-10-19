@@ -1,0 +1,10 @@
+# Humble Oak Solutions
+
+> Canadian operations and IT consulting for small and growing businesses in British Columbia.
+
+- Site: https://www.humbleoaksolutions.com/
+- Services: https://www.humbleoaksolutions.com/services/
+- Contact: https://www.humbleoaksolutions.com/contact-us/
+- Email: info@humbleoaksolutions.com
+
+Public services: operations consulting, project and site management, web development, IT systems, business intelligence, automation and integration, government funding applications.
