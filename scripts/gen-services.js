@@ -32,7 +32,7 @@ var navBlock = [
   '      <span></span><span></span><span></span>',
   '    </button>',
   '    <div class="hos-nav-panel" id="hosNavPanel">',
-  '      <a href="/" class="hos-nav-logo"><img src="/assets/Site Images/shared/logo-webflow-small.png" alt="Humble Oak Solutions"></a>',
+  '      <a href="/" class="hos-nav-logo"><img src="/assets/Site Images/shared/logo-mark.png" alt="Humble Oak Solutions"></a>',
   '      <div class="hos-nav-links">',
   navLinks,
   '      </div>',
