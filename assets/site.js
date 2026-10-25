@@ -23,10 +23,13 @@
     if (open) navToggle.focus();
   }
 
+  var desktopNav = window.matchMedia("(min-width: 1001px)");
+
   function setServicesTrayOpen(open) {
     if (!navServices || !navServicesBtn || !navServicesTray) return;
     navServices.classList.toggle("is-open", open);
-    navServicesBtn.classList.toggle("active", open);
+    var onServicesPage = document.body.getAttribute("data-page") === "services";
+    navServicesBtn.classList.toggle("active", open || onServicesPage);
     navServicesBtn.setAttribute("aria-expanded", open ? "true" : "false");
     if (open) navServicesTray.removeAttribute("hidden");
     else navServicesTray.setAttribute("hidden", "");
@@ -47,6 +50,10 @@
   if (navServicesBtn) {
     navServicesBtn.addEventListener("click", function (e) {
       e.stopPropagation();
+      if (desktopNav.matches) {
+        setServicesTrayOpen(!navServices.classList.contains("is-open"));
+        return;
+      }
       if (!nav || !nav.classList.contains("is-open")) {
         setNavOpen(true);
         setServicesTrayOpen(true);
@@ -56,9 +63,11 @@
     });
   }
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 900) setServicesTrayOpen(false);
-  });
+  function syncNavMode() {
+    if (desktopNav.matches) setNavOpen(false);
+  }
+  if (desktopNav.addEventListener) desktopNav.addEventListener("change", syncNavMode);
+  else if (desktopNav.addListener) desktopNav.addListener(syncNavMode);
 
   document.querySelectorAll(".hos-nav-links a:not(.hos-nav-services-overview), .hos-nav-services-tray a, .hos-nav-cta").forEach(function (link) {
     link.addEventListener("click", function () {
