@@ -90,7 +90,7 @@ function servicePage(s) {
     '  <link rel="preconnect" href="https://fonts.googleapis.com">',
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     '  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">',
-    '  <link rel="stylesheet" href="/assets/styles.css?v=2">',
+    '  <link rel="stylesheet" href="/assets/styles.css?v=3">',
     '</head>',
     '<body data-page="services" data-service="' + s.slug + '">',
     navBlock,
