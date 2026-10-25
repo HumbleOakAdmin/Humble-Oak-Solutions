@@ -78,7 +78,7 @@ img{max-width:100%;display:block;border-radius:var(--radius);box-shadow:var(--sh
   .hos-nav,.hos-nav.is-open{left:var(--page-gutter);right:var(--page-gutter);width:auto;max-width:none;flex-direction:row;align-items:center;padding:6px 10px 6px 8px;background:rgba(28,28,26,.92);border-color:rgba(196,163,90,.42)}
   .hos-nav-panel,.hos-nav:not(.is-open) .hos-nav-panel,.hos-nav.is-open .hos-nav-panel{display:flex;flex-direction:row;align-items:center;gap:8px;width:100%;max-width:none;max-height:none;opacity:1;overflow:visible;pointer-events:auto;transform:none;margin:0;padding:0;border:0}
   .hos-nav-logo,.hos-nav.is-open .hos-nav-logo{display:flex;padding:0}
-  .hos-nav-logo img{width:auto;height:46px;max-width:none;max-height:46px;padding:0;background:transparent;border-radius:0;filter:none;object-fit:contain}
+  .hos-nav-logo img{width:auto;height:58px;max-width:none;max-height:58px;padding:0;background:transparent;border-radius:0;filter:drop-shadow(0 1px 1px rgba(0,0,0,.45));object-fit:contain}
   .hos-nav-links{flex-direction:row;width:auto;margin:0 0 0 4px;gap:2px;align-items:center}
   .hos-nav-links a,.hos-nav-services-btn{padding:8px 12px;font-size:12px;min-height:44px;display:flex;align-items:center;background:transparent;box-shadow:none;border-radius:10px}
   .hos-nav-links a:hover,.hos-nav-services-btn:hover{color:var(--cream);background:transparent;box-shadow:none}
